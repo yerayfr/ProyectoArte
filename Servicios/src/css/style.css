@@ -1,0 +1,489 @@
+
+/*  
+* ================================
+* === Colores de la pagina web ===
+* ================================
+*/
+
+:root {
+  --color-verde:#43766C;
+  --color-marron:#513F3C;
+  --color-blanco:#FFFFFF;
+}
+
+/*  
+* ================================
+* === Fuente ===
+* ================================
+*/
+
+@font-face {
+  font-family: "Nanum Brush Script";
+  src: url("../fonts/NanumBrushScript-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*  
+* ================================
+* === Clases de la web ===
+* ================================
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-verde);
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-height: 50px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+  
+}
+
+h1 {
+  font-family: "Nanum Brush Script";
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: var(--color-blanco);
+  font-weight: 400;
+  transition: 0.1s;
+}
+
+a:hover {
+  font-size: 1.8em;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos {
+  height: 50px;
+  width: auto;
+}
+
+.contenedor-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--color-blanco);
+}
+
+.heroSection {
+  background-image: url(../img/imagenes/lobos_hero.jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  height: 700px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  display:flex;
+  justify-content: right;
+  padding: 20px;
+  margin: 30px;
+}
+
+.heroContent {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.titleContent {
+  width: calc(100%-60px);
+  height: 100px;
+  border-radius: 12px;
+  border: inherit 1px solid;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+}
+
+.titleContent > h2 {
+  font-size: 40px;
+  color: var(--color-blanco);
+  font-weight: 200;
+  font-style: italic;
+}
+
+.name {
+  font-size: 50px !important
+}
+
+.descriptionContent {
+  width: calc(100% - 60px);
+  height: 400px;
+  border-radius: 12px;
+  border: inherit 1px solid;
+   padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.descriptionContent > p {
+  font-size: 25px;
+  color: var(--color-blanco);
+}
+
+.buttonContent {
+  padding: 20px;
+  background-color: var(--color-verde);
+  border-radius: 12px;
+  color: var(--color-blanco);
+  border-color: var(--color-verde);
+  width: 100%;
+  transition: 0.3s;
+}
+
+.buttonContent:hover {
+  background-color: var(--color-blanco);
+  color: var(--color-verde);
+  border-color: var(--color-blanco);
+}
+
+/*  
+* ================================
+* === Seccion de las categorias (cards) ===
+* ================================
+*/
+
+.categoriesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin: 30px 100px;
+}
+
+.firstTitle {
+  font-size: 40px;
+}
+
+.secondTitle {
+  font-size: 35px;
+  font-weight: 100;
+}
+
+.cardConteiner {
+  margin: 20px;
+  width: calc(100% - 20px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 calc(25% - 60px); 
+  aspect-ratio: 3 / 3;        
+  background: var(--color-blanco);      
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:space-around;
+  
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.card > div {
+  text-align: center;
+}
+
+.card > div > h3 {
+  font-size: 40px;
+  color: var(--color-blanco);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.card > div > p {
+  font-size: 35px;
+  color: var(--color-blanco);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.fondoPintura {
+  background-image: url(../img/imagenes/fondoPintura.jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+}
+
+.fondoFotografia {
+  background-image: url(../img/imagenes/fondoFotografia.jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+}
+
+.fondoEscultura {
+  background-image: url(../img/imagenes/fondoEscultura.jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+}
+
+.fondoArteDigital {
+  background-image: url(../img/imagenes/fondoArteDigital.jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+}
+
+.fondoIlustracion {
+  background-image: url(../img/imagenes/fondoIlustracion.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+.fondoImaginacionVisual {
+  background-image: url(../img/imagenes/fondoImaginacionVisual.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+.fondoComposicion {
+  background-image: url(../img/imagenes/fondoComposicion.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+.fondoConceptArt {
+  background-image: url(../img/imagenes/fondoConceptArt.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+/*  
+* ================================
+* === Carrusel ===
+* ================================
+*/
+
+.carruselSection {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--color-blanco);
+  margin-bottom: 40px;
+}
+
+/* El wrapper es el área visible */
+.carrusel-wrapper {
+  width: 680px; /* 3 elementos visibles de 120px + 2 gaps de 20px = 460px */
+  overflow: hidden; /* oculta los demás */
+}
+
+.firstTitleCarrusel {
+  font-size: 40px;
+  color: black;
+}
+
+.secondTitleCarrusel {
+  font-size: 35px;
+  font-weight: 100;
+  color: black;
+  margin-bottom: 40px;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.artista img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.carrusel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flecha {
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.flecha:hover {
+  background: var(--color-verde);
+}
+
+
+/*  
+* ================================
+* === Formulario ===
+* ================================
+*/
+
+.formSection {
+  background-color: var(--color-verde);
+  text-align: center;
+  padding: 90px;
+}
+
+.formulario-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:20px;
+  background-color: var(--color-verde);
+}
+
+#nombre,
+#apellido {
+  grid-column: span 1;
+  padding: 20px;
+}
+
+#email,
+#numeroTelefono,
+#tematica,
+#formButton {
+  grid-column: span 2;
+  padding: 20px;
+}
+
+#formButton {
+  border-radius: 12px;
+  color: var(--color-verde);
+  font-weight: bold;
+  border-color: var(--color-blanco);
+  transition: 0.3s;
+}
+
+#formButton:hover {
+  border-color: var(--color-verde);
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.firstTitleFooter {
+  font-size: 40px;
+  color: var(--color-blanco);
+}
+
+.secondTitleFooter {
+  font-size: 35px;
+  font-weight: 100;
+  color: var(--color-blanco);
+  margin-bottom: 20px;
+}
+
+/*  
+* ================================
+* === Footer ===
+* ================================
+*/
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer {
+  background-color: var(--color-marron);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.footerTitle {
+  display: flex;
+  gap: 20px;
+}
+
+.footerIcons {
+  display: flex;
+  gap: 20px;
+}
+
+.footerIcons > img {
+  width: 40px;
+}
+
+.ulNav {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
