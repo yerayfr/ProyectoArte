@@ -179,7 +179,9 @@ nav .nav-links li a:hover {
 }
 
 .trabajos_container {
-    background-color: #F8FAE5;
+    background-color: rgba(248, 250, 229, 0.58); /* #F8FAE5 con opacidad del 58% */
+
+
 }
 
 /* Barra verde encima de la imagen */
@@ -215,7 +217,8 @@ nav .nav-links li a:hover {
 }
 
 .trabajos_container .trabajo1 h3:nth-of-type(1) { /* se refiere al primer trabajo */
-    right: -15px;           /* se pega al borde derecho */
+    right: 0;           /* se pega al borde derecho */
+    border-radius: 20px 20px 0px 20px;
 }
 
 .trabajos_container .trabajo2 h3:nth-of-type(1) { /* se refiere al segundo trabajo */   
@@ -225,6 +228,47 @@ nav .nav-links li a:hover {
 .trabajos_container img {
   margin-bottom: 15px; /* espacio entre imagen y barra */
 }
+
+/* =================
+   FOOTER
+   ================= */
+
+footer {
+    background-color: #513F3C;
+    color: white;
+    text-align: left;
+    padding: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.footer_content  {
+    padding-left: 15px;
+}
+
+.redes_sociales { /* Lista de redes sociales */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+}
+
+.redes_sociales li a img { /* Estilo común para todos los iconos */
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s;
+}
+
+.redes_sociales .facebook img { /* Icono de Facebook */
+    width: 25px;
+}
+
+.redes_sociales li a img:hover { /* Efecto hover para todos los iconos */
+    transform: scale(1.2);
+}
+
 
 /* =================
    MEDIA QUERIES
@@ -246,6 +290,7 @@ nav .nav-links li a:hover {
         width: 80%;
 
         text-align: center;
+        padding-bottom: 0;
     }
 
     .hero .sub-paragrafo {
@@ -285,5 +330,6 @@ nav .nav-links li a:hover {
 
     .hamburguesa {
         display: flex;
+        margin-right: 20px;
     }
 }
