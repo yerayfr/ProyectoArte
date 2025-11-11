@@ -1,32 +1,159 @@
-body{
-    margin: 0%;
-    width: 100%;
-    height: 100vh;
-    background-color: #201E2A;
-}
+/* =================
+   ESTILOS GENERALES
+   ================= */
 
-body > header{
+html,
+body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 8%;
-    background-color: #43766C;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #1A031F;
+    color: white;
 }
 
 main{
     width: 100%;
-    height: 250%; 
+    height: 100%;
 }
 
+
+/* =================
+   ESTILOS DEL NAVBAR
+   ================= */
+nav {
+    background-color: #56051E;
+    padding: 20px 160px;
+    padding-right: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* --- LOGO --- */
+nav .logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+nav .logo img {
+    height: 60px;
+}
+
+nav .logo p {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: normal;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* --- LINKS --- */
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    color: #D9E3E1;
+}
+
+/* --- HAMBURGUESA --- */
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    /* Líneas apiladas verticalmente */
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburguesa .linea {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* =================
+   ESTILOS DEL BODY
+   ================= */
+
+/* HEADER */
 main > header {
+    position: relative; /* Para posicionar el titulo sobre la imagen */
     width: 100%;
     height: auto;
 }
 
-main > header > img {
+main > header > img { /* Imagen de cabecera */
     width: 100%;
     object-fit: cover; 
-    display: block;
+    display:block;
 }
 
+.tituloArtista { /* Contenedor del titulo y subtitulo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute; /* Posicionamiento absoluto para superponer sobre la imagen */
+    top: -20px;
+    right: 0px;
+    max-width: 40%;
+    height: 100%;
+    padding: 0px 85px;
+    padding-right: 100px;
+
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    margin-top: 20px;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.tituloArtista h1 { /* Titulo del artista */
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 3.5em;
+
+    color: white;
+    transform: translateY(-90px);
+}
+
+.tituloArtista h2 { /* Subtitulo del artista */
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+
+    transform: translateY(-85px);
+}
+
+/* =================
+   ESTILOS DE LA GALERIA
+   ================= */
 main > section{
     width: 80%;
     margin: auto;
@@ -40,24 +167,60 @@ main > section{
   margin-top: 5%;
 }
 
-.galeria > img {
+.galeria > img { /* Imagenes de la galeria */
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.imagenGrande { 
+.imagenGrande { /* Imagen grande de la galeria */
     width: 100%; 
     object-fit: cover; 
     display: block;
     border-radius: 8px;
 }
 
-.imagenesPequeñas {
+.imagenesPequeñas { /* Contenedor de las imagenes pequeñas */
   width: 22%;
   aspect-ratio: 1 / 1.5; /* Forma de la imagen en este caso rectangulares  */
   object-fit: cover; 
   overflow: hidden;
   border-radius: 8px;
+}
+
+
+/* =================
+    MEDIAQUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+    /* --- NAVBAR --- */
+    nav {
+        padding: 20px 60px;
+    }
+
+    nav .logo a {
+        justify-content: center;
+    }
+
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    .hamburguesa {
+        display: flex;
+        margin-right: 20px;
+    }
+
+     footer {
+        padding: 40px 60px;
+     }
 }
