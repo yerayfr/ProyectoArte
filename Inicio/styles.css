@@ -19,11 +19,12 @@ body {
 }
 
 /* =================
-   ESTILOS DEL NAV
+   ESTILOS DEL NAVBAR
    ================= */
 nav {
     background-color: #43766C;
-    padding: 20px 40px;
+    padding: 20px 160px;
+    padding-right: 180px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -96,7 +97,7 @@ nav .nav-links li a:hover {
 /* =================
    ESTILOS DEL HERO
    ================= */
-.hero {
+.hero { /* CAJA DE: DRIFTWOOD VISIONS y Quienes somos? */
     margin: 15px 0;
     background-color: #634A45;
     font-family: 'Montserrat', sans-serif;
@@ -178,10 +179,8 @@ nav .nav-links li a:hover {
     margin: 15px 0;
 }
 
-.trabajos_container {
+.trabajos_container { /* Fondo entre imágenes y barras */
     background-color: rgba(248, 250, 229, 0.58); /* #F8FAE5 con opacidad del 58% */
-
-
 }
 
 /* Barra verde encima de la imagen */
@@ -202,16 +201,17 @@ nav .nav-links li a:hover {
 /* El nombre del artista "colgando" hacia abajo */
 .titulo_artista h3 {
   position: absolute;
-  bottom: -90px; /* lo hace colgar por debajo de la barra */
-  
+  bottom: -185px; /* lo hace colgar por debajo de la barra */
+
   background-color: #43766C;
+  
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
 
-  padding: 50px 65px; /* espacio interno */
-  padding-top: 10px; /* quita el padding superior */
+  padding: 90px 200px; /* espacio interno */
+  padding-top: 40px; /* quita el padding superior */
   border-radius: 20px;
   z-index: 3; /* encima de la imagen */
 }
@@ -237,7 +237,7 @@ footer {
     background-color: #513F3C;
     color: white;
     text-align: left;
-    padding: 40px;
+    padding: 40px 160px;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     margin-top: 20px;
@@ -274,6 +274,31 @@ footer {
    MEDIA QUERIES
    ================= */
 @media screen and (max-width: 1000px) {
+    /* --- NAVBAR --- */
+    nav {
+        padding: 20px 60px;
+    }
+
+    nav .logo a {
+        justify-content: center;
+    }
+
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    .hamburguesa {
+        display: flex;
+        margin-right: 20px;
+    }
 
     /* --- HERO --- */
     .hero {
@@ -311,25 +336,7 @@ footer {
         text-align: center;
     }
 
-    /* --- NAVBAR --- */
-    nav .logo a {
-        justify-content: center;
-    }
-
-    nav .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 15px;
-    }
-
-    nav .nav-links.active {
-        display: flex;
-    }
-
-    .hamburguesa {
-        display: flex;
-        margin-right: 20px;
-    }
+    footer {
+        padding: 40px 60px;
+     }
 }
