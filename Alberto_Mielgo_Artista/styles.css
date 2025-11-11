@@ -78,7 +78,7 @@ nav .nav-links li a:hover {
 
 /* --- HAMBURGUESA --- */
 .hamburguesa {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
@@ -306,7 +306,6 @@ footer {
     }
 
     .hamburguesa {
-        display: flex;
         margin-right: 20px;
     }
 
