@@ -5,6 +5,24 @@
 * ================================
 */
 
+.imgLogo {
+   max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =================
+   ESTILOS GENERALES
+   ================= */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+}
 :root {
   --color-verde:#43766C;
   --color-marron:#513F3C;
@@ -13,102 +31,88 @@
 
 /*  
 * ================================
-* === Fuente ===
-* ================================
-*/
-
-@font-face {
-  font-family: "Nanum Brush Script";
-  src: url("../fonts/NanumBrushScript-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/*  
-* ================================
 * === Clases de la web ===
 * ================================
 */
 
-html {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--color-verde);
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  max-height: 50px;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  margin: 0;
-  padding: 0;
-  
-}
-
-h1 {
-  font-family: "Nanum Brush Script";
-}
-
-ul {
-  display: flex;
-  gap: 20px;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  font-size: 1.5em;
-  color: var(--color-blanco);
-  font-weight: 400;
-  transition: 0.1s;
-}
-
-a:hover {
-  font-size: 1.8em;
-}
-
 nav {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
+    background-color: #43766C;
+    padding: 20px 160px;
+    padding-right: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.logos {
-  height: 50px;
-  width: auto;
+/* --- LOGO --- */
+nav .logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
-.contenedor-titulo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
+nav .logo img {
+    height: 60px;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: var(--color-blanco);
+nav .logo p {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: normal;
+    margin: 0;
+    padding-left: 10px;
 }
+
+/* --- LINKS --- */
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    color: #D9E3E1;
+}
+
+/* --- HAMBURGUESA --- */
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    /* Líneas apiladas verticalmente */
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburguesa .linea {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/*
+* =======================
+* ==  HERO SECTION     ==
+* =======================
+*/
 
 .heroSection {
   background-image: url(../img/imagenes/lobos_hero.jpg);
@@ -142,15 +146,19 @@ nav {
   padding: 30px;
 }
 
-.titleContent > h2 {
+.titleContent_text1 {
+  margin: 0;
+  padding: 0;
   font-size: 40px;
   color: var(--color-blanco);
   font-weight: 200;
   font-style: italic;
 }
 
-.name {
-  font-size: 50px !important
+.titleContent_text2 {
+  margin: 0;
+  padding: 0;
+  font-size: 50px
 }
 
 .descriptionContent {
@@ -199,11 +207,17 @@ nav {
 
 .firstTitle {
   font-size: 40px;
+  color: black;
+  margin:0;
+  padding: 0;
 }
 
 .secondTitle {
   font-size: 35px;
   font-weight: 100;
+  color: black;
+  margin:0;
+  padding: 0;
 }
 
 .cardConteiner {
@@ -323,20 +337,24 @@ nav {
 
 /* El wrapper es el área visible */
 .carrusel-wrapper {
-  width: 680px; /* 3 elementos visibles de 120px + 2 gaps de 20px = 460px */
+  width: 550px; /* 3 elementos visibles de 120px + 2 gaps de 20px = 460px */
   overflow: hidden; /* oculta los demás */
 }
 
 .firstTitleCarrusel {
   font-size: 40px;
   color: black;
+  margin: 0;
+  padding: 0;
 }
 
 .secondTitleCarrusel {
   font-size: 35px;
   font-weight: 100;
   color: black;
+  margin-top: 0;
   margin-bottom: 40px;
+
 }
 
 .carrusel-contenedor {
@@ -351,13 +369,14 @@ nav {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid white;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  
 }
 
 .carrusel-nav {
   display: flex;
   justify-content: center;
   gap: 20px;
+  background-color: white;
 }
 
 .flecha {
@@ -424,58 +443,254 @@ nav {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-.firstTitleFooter {
+.firstTitleform {
   font-size: 40px;
   color: var(--color-blanco);
 }
 
-.secondTitleFooter {
+.secondTitleForm {
   font-size: 35px;
   font-weight: 100;
   color: var(--color-blanco);
   margin-bottom: 20px;
 }
 
-/*  
-* ================================
-* === Footer ===
-* ================================
-*/
-
-.footerContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+/* =================
+   FOOTER
+   ================= */
 
 footer {
-  background-color: var(--color-marron);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
+    background-color: #513F3C;
+    color: white;
+    text-align: left;
+    padding: 40px 160px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
 }
 
-.footerTitle {
-  display: flex;
-  gap: 20px;
+.footer_content  {
+    padding-left: 15px;
 }
 
-.footerIcons {
-  display: flex;
-  gap: 20px;
+.redes_sociales { /* Lista de redes sociales */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    gap: 30px;
 }
 
-.footerIcons > img {
-  width: 40px;
+.redes_sociales li a img { /* Estilo común para todos los iconos */
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s;
 }
 
-.ulNav {
-  display: flex;
-  flex-direction: column;
+.redes_sociales .facebook img { /* Icono de Facebook */
+    width: 25px;
 }
 
+.redes_sociales li a img:hover { /* Efecto hover para todos los iconos */
+    transform: scale(1.2);
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+
+  /* --- NAVBAR --- */
+  nav {
+    padding: 20px 60px;
+  }
+
+  nav .logo a {
+    justify-content: center;
+  }
+
+  nav .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  .hamburguesa {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  /* --- HERO SECTION --- */
+  .heroSection {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .heroContent {
+    width: 100%;
+    align-items: center;
+  }
+
+  .titleContent {
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .titleContent_text1 {
+    font-size: 28px;
+  }
+
+  .titleContent_text2 {
+    font-size: 32px;
+  }
+
+  .descriptionContent {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .descriptionContent p {
+    font-size: 20px;
+  }
+
+  .buttonContent {
+    width: 80%;
+    padding: 15px;
+  }
+
+  /* --- CATEGORIES SECTION --- */
+  .categoriesSection {
+    margin: 20px 40px;
+  }
+
+  .firstTitle {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .secondTitle {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .cardConteiner {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    flex: none;
+    width: 90%;
+    aspect-ratio: auto;
+  }
+
+  .card > div > h3 {
+    font-size: 28px;
+  }
+
+  .card > div > p {
+    font-size: 22px;
+  }
+
+  /* --- CARRUSEL SECTION --- */
+  .carruselSection {
+    margin: 40px 20px;
+    padding: 20px;
+  }
+
+  .carrusel-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .firstTitleCarrusel {
+    font-size: 30px;
+  }
+
+  .secondTitleCarrusel {
+    font-size: 25px;
+  }
+
+  .artista img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .flecha {
+    padding: 8px 12px;
+    font-size: 1.5rem;
+  }
+
+  /* --- FORM SECTION --- */
+  .formSection {
+    padding: 40px 20px;
+  }
+
+  .formulario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #nombre,
+  #apellido,
+  #email,
+  #numeroTelefono,
+  #tematica,
+  #formButton {
+    grid-column: span 1;
+    padding: 15px;
+  }
+
+  .firstTitleform {
+    font-size: 30px;
+  }
+
+  .secondTitleForm {
+    font-size: 24px;
+  }
+
+  /* --- FOOTER --- */
+  footer {
+    
+  }
+
+  .footer_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_content h3 {
+    margin-bottom: 15px;
+  }
+
+  .redes_sociales {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .redes_sociales li a img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .redes_sociales .facebook img {
+    width: 22px;
+  }
+}
 
 
 
