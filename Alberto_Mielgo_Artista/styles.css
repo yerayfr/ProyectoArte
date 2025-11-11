@@ -197,7 +197,7 @@ main {
 }
 
 main::before,
-main::after {
+main::after { /* pseudoelementos para las imágenes de fondo */
     content: "";
     position: absolute;
     bottom: 0;
@@ -260,17 +260,17 @@ footer {
     gap: 30px;
 }
 
-.redes_sociales li a img {
+.redes_sociales li a img { /* Iconos de redes sociales */
     width: 40px;
     height: 40px;
     transition: transform 0.3s;
 }
 
-.redes_sociales .facebook img {
+.redes_sociales .facebook img { /* Icono de Facebook */
     width: 25px;
 }
 
-.redes_sociales li a img:hover {
+.redes_sociales li a img:hover { /* Efecto hover en iconos */
     transform: scale(1.2);
 }
 
