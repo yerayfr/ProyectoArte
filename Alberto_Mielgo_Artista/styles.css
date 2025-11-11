@@ -197,7 +197,8 @@ main {
 }
 
 main::before,
-main::after { /* pseudoelementos para las imágenes de fondo */
+main::after {
+    /* pseudoelementos para las imágenes de fondo */
     content: "";
     position: absolute;
     bottom: 0;
@@ -260,17 +261,20 @@ footer {
     gap: 30px;
 }
 
-.redes_sociales li a img { /* Iconos de redes sociales */
+.redes_sociales li a img {
+    /* Iconos de redes sociales */
     width: 40px;
     height: 40px;
     transition: transform 0.3s;
 }
 
-.redes_sociales .facebook img { /* Icono de Facebook */
+.redes_sociales .facebook img {
+    /* Icono de Facebook */
     width: 25px;
 }
 
-.redes_sociales li a img:hover { /* Efecto hover en iconos */
+.redes_sociales li a img:hover {
+    /* Efecto hover en iconos */
     transform: scale(1.2);
 }
 
@@ -278,6 +282,9 @@ footer {
    MEDIA QUERIES
    ================= */
 @media screen and (max-width: 1000px) {
+    /* Estilos para pantallas pequeñas */
+
+    /* Navbar responsivo */
     nav {
         padding: 20px 60px;
     }
@@ -303,6 +310,23 @@ footer {
         margin-right: 20px;
     }
 
+    /* Header responsivo */
+    .tituloArtista {
+        font-size: 0.8em;
+    }
+
+    .tituloArtista h1 {
+        color: white;
+        font-size: 3.5em;
+        transform: translateY(-70px);
+    }
+
+    .tituloArtista h2 {
+        font-size: 2em;
+        transform: translateY(-65px);
+    }
+
+    /* Footer responsivo */
     footer {
         padding: 40px 60px;
     }
