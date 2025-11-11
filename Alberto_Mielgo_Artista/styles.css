@@ -332,16 +332,21 @@ footer {
 
     /* La galería en pantallas pequeñas */
     .galeria {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 5%;
-        row-gap: 30px;
-    }
+    grid-template-columns: 1fr; /* Solo una columna en móviles */
+    row-gap: 30px;
+  }
 
-    .imagenGrande {
-        grid-column: span 2;
-    }
+  /* Las imágenes grandes van primero y ocupan todo el ancho */
+  .imagenGrande,
+  .imagenExtraGrande {
+    grid-column: 1 / -1; /* Ocupan toda la fila */
+    order: -1; /* Muevelas al inicio */
+  }
 
-    .imagenExtraGrande {
-        grid-column: span 2;
-    }
+  /* Ajuste opcional de tamaño o proporción */
+  .imagenGrande img,
+  .imagenExtraGrande img {
+    width: 100%;
+    height: auto;
+  }
 }
