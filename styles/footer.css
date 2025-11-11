@@ -1,0 +1,50 @@
+/* =================
+   FOOTER
+   ================= */
+footer {
+    background-color: #3D0761;
+    color: white;
+    text-align: left;
+    padding: 40px 160px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+}
+
+.footer_content {
+    padding-left: 15px;
+}
+
+.redes_sociales {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+}
+
+.redes_sociales li a img {
+    /* Iconos de redes sociales */
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.redes_sociales .facebook img {
+    /* Icono de Facebook */
+    width: 25px;
+}
+
+.redes_sociales li a img:hover {
+    /* Efecto hover en iconos */
+    transform: scale(1.2);
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+    /* Footer responsivo */
+    footer {
+        padding: 40px 60px;
+    }
+}

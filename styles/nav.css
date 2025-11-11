@@ -1,0 +1,105 @@
+/* =================
+   ESTILOS DEL NAVBAR
+   ================= */
+nav {
+    /*background-color: #43766C;*/
+    padding: 20px 160px;
+    padding-right: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* --- LOGO --- */
+nav .logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+nav .logo img {
+    height: 60px;
+}
+
+nav .logo p {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: normal;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* --- LINKS --- */
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    color: #D9E3E1;
+}
+
+/* --- HAMBURGUESA --- */
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    /* Líneas apiladas verticalmente */
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburguesa .linea {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+    /* Navbar responsivo */
+    nav {
+        padding: 20px 60px;
+    }
+
+    nav .logo a {
+        justify-content: center;
+    }
+
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    .hamburguesa {
+        margin-right: 20px;
+    }
+}
