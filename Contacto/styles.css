@@ -121,11 +121,19 @@ nav .nav-links li a:hover {
     }
 }
 
+
+/*
+========================================
+CSS Contacto
+========================================
+*/
+
 .mid-section{
     display: flex;
     width: 100vw;
     height: 70vh;
     background-color: #2e2e2e;
+    overflow: hidden;
 }
 
 .left{
@@ -133,6 +141,12 @@ nav .nav-links li a:hover {
     width: 25vw;
     background-color: #43756b;
     margin: 20px;
+    overflow: hidden;
+}
+.left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .center{
     display: flex;
@@ -141,6 +155,7 @@ nav .nav-links li a:hover {
     width: 50vw;
     background-color: #c7c7c7;
     margin: 20px;
+    overflow: scroll;
 }
 
 .titulo{
@@ -157,12 +172,19 @@ nav .nav-links li a:hover {
     margin-right: 3vw;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 .name-lastname input{
     display: flex;
     border: 0;
     padding: 1vb;
     width: 17vw;
+}
+#name{
+    margin-right: 2px;
+}
+#last-name{
+    margin-left: 2px;
 }
 .formulario{
     display: flex;
@@ -189,12 +211,13 @@ nav .nav-links li a:hover {
     margin-right: 3vw;
     padding: 1vb;
     border: 0;
-    resize: vertical;
+    resize: none;
 }
 .formulario button{
     margin-top: 2vh;
     margin-left: 3vw;
     margin-right: 3vw;
+    margin-bottom: 2vh;
     padding: 1vb;
     background-color: #43756b;
     color: #f8fae6;
@@ -208,12 +231,17 @@ nav .nav-links li a:hover {
     color: #43766c;
 }
 
-
 .right{
     display: flex;
     width: 25vw;
     background-color: #43756b;
     margin: 20px;
+    overflow: hidden;
+}
+.right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* =================
