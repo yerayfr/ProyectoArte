@@ -2,33 +2,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Drifwood Visions</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./src/img/Inicio/logo.svg">
     <link rel="stylesheet" href="./src/css/style.css">
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="contenedor-titulo">
-            <img src="./src/img/logo/logo.png" class="logos" alt="logo">
-            <h1 class="title">Driftwood Visions</h1>
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Servicios</a></li>
-            </ul>
-            <img src="./src/img/iconos/hamburguesa/hamburguesa.svg" class="logos" alt="hamburguesa">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./src/img/Inicio/logo.svg" alt="Drifwood Visions Logo" class="imgLogo">
+                    <p>Drifwood Visions</p>
+                </a>
+            </div>
+            <div class="navegacion">
+                <ul class="nav-links">
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="aboutUs.html">Sobre nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+                <div class="hamburguesa">
+                    <div class="linea"></div>
+                    <div class="linea"></div>
+                    <div class="linea"></div>
+                </div>
+            </div>
+
         </nav>
-        
     </header>
     <main>
         <section class="heroSection">
             <div class="heroContent">
                 <div class="titleContent">
-                    <h2>Lobos Exteriores</h2>
-                    <h2 class="name">Lucia Fernandez</h2>
+                    <h2 class="titleContent_text1">Lobos Exteriores</h2>
+                    <h2 class="titleContent_text2">Lucia Fernandez</h2>
                 </div>
                 <div class="descriptionContent">
                     <p>Esto es un texto de emplo sobre como de ser la vida de los lobos.</p>
@@ -129,8 +142,8 @@
         </section>
 
         <section class="formSection">
-            <h2 class="firstTitleFooter">¿Eres un artista?</h2>
-            <h2 class="secondTitleFooter">Únete a nuestra comunidad y comparte tu arte con el mundo.</h2>
+            <h2 class="firstTitleform">¿Eres un artista?</h2>
+            <h2 class="secondTitleForm">Únete a nuestra comunidad y comparte tu arte con el mundo.</h2>
 
             <form action="formulario" class="formulario-grid">
 
@@ -142,36 +155,21 @@
                 <input type="button" id="formButton" value="Enviar">
             </form>
         </section>
-
-        
-
     </main>
-    <footer>
-        <div class="footerContainer">
-            <div class="footerTitle">
-                <img src="./src/img/logo/logo.png" class="logos" alt="logo">
-                <h1 class="title">Driftwood Visions</h1>
-            </div>
-            <div class="footerIcons">
-                <img src="./src/img/iconos/facebook/facebook.png" alt="facebook">
-                <img src="./src/img/iconos/instagram/instagram.png" alt="instagram">
-                <img src="./src/img/iconos/twitter/twitter.png" alt="twitter">
-                <img src="./src/img/iconos/icono_footer/icono_footer.png" alt="footerIcon">
-            </div>
-        </div>
-        
 
-        <div>
-            <nav>
-                <ul class="ulNav">
-                    <li><a href="#">Galeria</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Servicios</a></li>
-                </ul>
-            </nav>
+    <footer>
+        <div class="footer_content">
+            <h3>Contacta con nosotros</h3>
+            <ul class="redes_sociales">
+                <li><a href="https://www.facebook.com/driftwoodvisions" target="_blank" class="facebook"><img src="./src/img/Inicio/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/driftwoodvisions/" target="_blank" class="instagram"><img src="./src/img/Inicio/instagram.svg" alt="Instagram"></a></li>
+                <li><a href="https://twitter.com/driftwoodvisions" target="_blank" class="twitter"><img src="./src/img/Inicio/twitter.png" alt="Twitter"></a></li>
+                <li><a href="https://www.artstation.com/driftwoodvisions" target="_blank" class="artstation"><img src="./src/img/Inicio/artstation.svg"
+                            alt="ArtStation"></a></li>
+            </ul>
         </div>
     </footer>
+
     <script src="./src/javascript/javascript.js"></script>
 </body>
 </html>
