@@ -86,6 +86,10 @@ nav {
   background-color: #bfbfbf;
 }
 
+.botonObras:active {
+  background-color: #a6a6a6;
+}
+
 /* =================
    RESPONSIVE DESIGN
    ================= */

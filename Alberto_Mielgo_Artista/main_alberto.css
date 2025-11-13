@@ -154,6 +154,43 @@ main::after {
     z-index: 1;
 }
 
+/* =================
+   BOTÓN OBRA DESTACADA
+   ================= */
+
+.botonObras {
+    position: relative;
+    z-index: 10;
+    /* hace que el botón quede encima */
+
+    display: flex;
+
+    margin: 40px auto;
+    margin-top: 80px;
+
+    padding: 18px 60px;
+    font-size: 1.3em;
+    font-weight: 600;
+    
+    color: #fff;
+    background: linear-gradient(45deg, #6a0dad, #9b30ff);
+    border: #6a0dad solid 4px;
+    border-radius: 0;
+
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.botonObras:hover {
+    transform: translateY(-3px);
+}
+
+.botonObras:active {
+    transform: translateY(0);
+}
+
 
 /* =================
    FOOTER
@@ -186,21 +223,36 @@ footer {
 
     /* La galería en pantallas pequeñas */
     .galeria {
-    grid-template-columns: 1fr; /* Solo una columna en móviles */
-    row-gap: 30px;
-  }
+        grid-template-columns: 1fr;
+        /* Solo una columna en móviles */
+        row-gap: 30px;
+    }
 
-  /* Las imágenes grandes van primero y ocupan todo el ancho */
-  .imagenGrande,
-  .imagenExtraGrande {
-    grid-column: 1 / -1; /* Ocupan toda la fila */
-    order: -1; /* Muevelas al inicio */
-  }
+    /* Las imágenes grandes van primero y ocupan todo el ancho */
+    .imagenGrande,
+    .imagenExtraGrande {
+        grid-column: 1 / -1;
+        /* Ocupan toda la fila */
+        order: -1;
+        /* Muevelas al inicio */
+    }
 
-  /* Ajuste opcional de tamaño o proporción */
-  .imagenGrande img,
-  .imagenExtraGrande img {
-    width: 100%;
-    height: auto;
-  }
+    /* Ajuste opcional de tamaño o proporción */
+    .imagenGrande img,
+    .imagenExtraGrande img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*Fondo*/
+    main::before{
+        top: 600px;
+    }
+
+    .botonObras {
+        font-size: 1em;
+        padding: 14px 40px;
+        border-radius: 10px;
+        margin-top: 45px;
+    }
 }
