@@ -185,6 +185,7 @@ main::after {
 
 .botonObras:hover {
     transform: translateY(-3px);
+    border-color: #d1d1d1;
 }
 
 .botonObras:active {
@@ -252,7 +253,6 @@ footer {
     .botonObras {
         font-size: 1em;
         padding: 14px 40px;
-        border-radius: 10px;
         margin-top: 45px;
     }
 }
