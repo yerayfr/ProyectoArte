@@ -1,5 +1,3 @@
-
-
 /* =================
    ESTILOS DEL NAV
    ================= */
@@ -118,86 +116,111 @@ width: 100%;
 
 }*/
 
-.techo{
+/*
+.techo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0;
     height: 20px;
-    
-    background:linear-gradient(20.15deg,  #FFFFFF 10%  ,#43766C 90% );;
+
+    background: linear-gradient(20.15deg, #FFFFFF 10%, #43766C 90%);
+    ;
 }
-.fondo{
+
+.fondo {
     width: 100%;
     height: 60%;
     background-color: #43766C;
 
 
 }
-.sotano{
+
+.sotano {
     height: 20px;
-    background: linear-gradient(20.15deg,#43766C 90% , #FFFFFF 10% );
+    background: linear-gradient(-20.15deg, #FFFFFF 10%, #43766C 90%);
+}*/
+
+
+.fondo{
+    left: 0;
+     background-image: url("./img/bg.svg");
+     top: -80px;
+     width: 100%;
+     height: 70%;
 }
-article{
-    width:80% ;
+article {
+    width: 55%;
     height: 100%;
-    margin-left: 10%;
-    background-color:rgba(255, 255, 255, 70%) ;
+    
+    margin-left: 25%;
+    /*background-color: rgba(255, 255, 255, 70%);*/
     display: flex;
     flex-direction: column;
 }
-article>section{
+
+
+article>section {
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
-    
+
 }
-article>section>div{
-display: flex;
-flex-direction: column;
-width: 30%;
-height: 100%;
-margin-left:40% ;
+
+article>section>div {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin-left: 40%;
 }
-article>section:nth-child(2)>div{
-display: flex;
-flex-direction: column;
-width: 30%;
-height: 100%;
-margin-left:0 ;
-margin-right: 40%;
+
+article>section:nth-child(2)>div {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin-left: 0;
+    margin-right: 40%;
 }
-article>section>div>h3{
+
+article>section>div>h3 {
     width: 100%;
     height: 30%;
 }
-article>section>div>p{
-width: 100%;
-height: 70%;
+
+article>section>div>p {
+    width: 100%;
+    height: 70%;
 }
-.logo{
+
+.logo {
     color: #FFFFFF;
 
     font-size: 36pt;
     font-family: "Nanum Brush Script", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
-footer{
+
+footer {
     color: #FFFFFF;
-    background-color: #513F3C ;
+    background-color: #513F3C;
 }
-footer>h2{
+
+footer>h2 {
     margin-top: 5px;
     margin-left: 10px;
     font-size: 32pt;
 }
-footer>img{
-width: 50pt;
-height: 50pt;
+
+footer>img {
+    width: 50pt;
+    height: 50pt;
 }
-.imagenes{
-width: 100pt;
-height: 50pt;
+
+.imagenes {
+    width: 100pt;
+    height: 50pt;
 }
