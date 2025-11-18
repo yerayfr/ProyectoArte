@@ -1,4 +1,80 @@
-header{
+/* =================
+   ESTILOS DEL NAV
+   ================= */
+nav {
+    background-color: #43766C;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* --- LOGO --- */
+nav .logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+nav .logo img {
+    height: 60px;
+}
+
+nav .logo p {
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: normal;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* --- LINKS --- */
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    color: #D9E3E1;
+}
+
+/* --- HAMBURGUESA --- */
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    /* Líneas apiladas verticalmente */
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburguesa .linea {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+
+/*header{
     color: #FFFFFF;
     background-color: #43766C;
     display: flex;
@@ -38,77 +114,113 @@ font-size: 24pt;
 height: 100%;
 width: 100%;
 
+}*/
+
+/*
+.techo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 20px;
+
+    background: linear-gradient(20.15deg, #FFFFFF 10%, #43766C 90%);
+    ;
 }
 
-body{
-    background: linear-gradient(-40.39deg,#43766C 70% , #FFFFFF 15%, );
-
-}
-body>div{
-    rotate: -40.39;
+.fondo {
     width: 100%;
-    height: 100%;
+    height: 60%;
     background-color: #43766C;
+
+
 }
-article{
-    width:80% ;
+
+.sotano {
+    height: 20px;
+    background: linear-gradient(-20.15deg, #FFFFFF 10%, #43766C 90%);
+}*/
+
+
+.fondo{
+    left: 0;
+     background-image: url("./img/bg.svg");
+     top: -80px;
+     width: 100%;
+     height: 70%;
+}
+article {
+    width: 55%;
     height: 100%;
-    margin-left: 10%;
-    background-color:rgba(255, 255, 255, 70%) ;
+    
+    margin-left: 25%;
+    /*background-color: rgba(255, 255, 255, 70%);*/
     display: flex;
     flex-direction: column;
 }
-article>section{
+
+
+article>section {
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
-    
+
 }
-article>section>div{
-display: flex;
-flex-direction: column;
-width: 30%;
-height: 100%;
-margin-left:40% ;
+
+article>section>div {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin-left: 40%;
 }
-article>section:nth-child(2)>div{
-display: flex;
-flex-direction: column;
-width: 30%;
-height: 100%;
-margin-left:0 ;
-margin-right: 40%;
+
+article>section:nth-child(2)>div {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin-left: 0;
+    margin-right: 40%;
 }
-article>section>div>h3{
+
+article>section>div>h3 {
     width: 100%;
     height: 30%;
 }
-article>section>div>p{
-width: 100%;
-height: 70%;
+
+article>section>div>p {
+    width: 100%;
+    height: 70%;
 }
-.logo{
+
+.logo {
     color: #FFFFFF;
 
     font-size: 36pt;
     font-family: "Nanum Brush Script", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
-footer{
+
+footer {
     color: #FFFFFF;
-    background-color: #513F3C ;
+    background-color: #513F3C;
 }
-footer>h2{
+
+footer>h2 {
     margin-top: 5px;
     margin-left: 10px;
     font-size: 32pt;
 }
-footer>img{
-width: 50pt;
-height: 50pt;
+
+footer>img {
+    width: 50pt;
+    height: 50pt;
 }
-.imagenes{
-width: 100pt;
-height: 50pt;
+
+.imagenes {
+    width: 100pt;
+    height: 50pt;
 }

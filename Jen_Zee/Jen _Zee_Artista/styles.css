@@ -29,7 +29,7 @@ nav .logo img {
 }
 
 nav .logo p {
-    color: white;
+    color: #B6AAEC;
     font-size: 2.5em;
     font-family: 'Nanum Brush Script', cursive;
     font-weight: normal;
@@ -52,14 +52,14 @@ nav .nav-links {
 }
 
 nav .nav-links li a {
-    color: white;
+    color: #B6AAEC;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav .nav-links li a:hover {
-    color: #D9E3E1;
+    color: #3B2F52;
 }
 
 /* --- HAMBURGUESA --- */
@@ -74,7 +74,7 @@ nav .nav-links li a:hover {
 .hamburguesa .linea {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #B6AAEC;
     transition: all 0.3s;
 }
 
