@@ -217,7 +217,8 @@ CSS Contacto
     width: 100vw;
     height: 70vh;
     background-color: #2e2e2e;
-    overflow: hidden;
+    overflow: scroll;
+    scrollbar-width: none;  
 }
 
 .left{
@@ -255,21 +256,15 @@ CSS Contacto
     margin-top: 2vh;
     margin-left: 3vw;
     margin-right: 3vw;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1vb;
 }
 .name-lastname input{
     display: flex;
     border: 0;
     padding: 1vb;
-    width: 17vw;
-}
-#name{
-    margin-right: 2px;
-}
-#last-name{
-    margin-left: 2px;
+    width: 100%;
 }
 .formulario{
     display: flex;
