@@ -1,8 +1,8 @@
 
 
 /* =================
-   ESTILOS GENERALES
-   ================= */
+ESTILOS GENERALES
+================= */
 html,
 body {
     margin: 0;
@@ -142,6 +142,7 @@ CSS Contacto
     background-color: #43756b;
     margin: 20px;
     overflow: hidden;
+    padding: 1vh;
 }
 .left img{
     width: 100%;
@@ -237,6 +238,7 @@ CSS Contacto
     background-color: #43756b;
     margin: 20px;
     overflow: hidden;
+    padding: 1vh;
 }
 .right img{
     width: 100%;
