@@ -121,16 +121,28 @@ article {
     width: 20%;
     height: 70%;
     margin: auto;
+    transform: translateY(0);
+    box-shadow: 0 10px 25px rgba(0,0,0,0); 
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-article > img {
+article:hover {
+    transform: translateY(-5%);  
+    box-shadow: 0 20px 35px rgba(0,0,0,0.3); 
+}
+
+article > a{
+    text-decoration: none;
+}
+
+article > a > img {
     width: 100%;
     height: 80%;
     object-fit: cover; 
     display: block;
 }
 
-article > footer{
+article > a > footer{
     width: 100%;
     height: 20%;
     background-color: #43766C;
@@ -138,12 +150,11 @@ article > footer{
     align-items: center;
 }
 
-article > footer > h2{
+article > a > footer > h2{
     margin: auto;
     color: white;
     font-size: 28px;
 }
-
 
 body > footer {
     background-color: #513F3C;
