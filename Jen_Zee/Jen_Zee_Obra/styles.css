@@ -1,226 +1,185 @@
 /* =========================
    BODY Y ENLACES
    ========================= */
-body{
-    margin: 0; /* Elimina los márgenes por defecto del navegador */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    background-color: #201E2A; /* Color de fondo oscuro */
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh; /* altura mínima para que main y footer se ajusten */
+    background-color: #201E2A;
+    font-family: "Inter", sans-serif;
 }
 
-/* Estilos globales para enlaces */
-a,
-a:link,
-a:visited {
-  text-decoration: none; /* Quita subrayado */
-  color: inherit; /* Hereda el color del contenedor */
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* =========================
    NAVBAR
    ========================= */
 nav {
-    background-color: #43766C; /* Color de fondo del navbar */
-    padding: 20px 160px; /* Espaciado interno */
-    padding-right: 180px; /* Ajuste de padding derecho */
-    display: flex; /* Flexbox para alinear elementos */
-    align-items: center; /* Centra verticalmente */
-    justify-content: space-between; /* Espacio entre logo y links */
-    flex-wrap: wrap; /* Permite que los elementos se muevan a otra línea */
-}
-
-/* --- LOGO --- */
-nav .logo a {
-    display: flex; /* Flexbox para logo + texto */
-    flex-direction: row; /* Elementos en fila */
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
-    text-decoration: none; /* Sin subrayado */
-}
-
-nav .logo img {
-    height: 60px; /* Altura del logo */
-}
-
-nav .logo p {
-    color: #B6AAEC; /* Color del texto del logo */
-    font-size: 2.5em; /* Tamaño grande */
-    font-family: 'Nanum Brush Script', cursive; /* Tipografía cursiva */
-    font-weight: normal;
-    margin: 0;
-    padding-left: 10px; /* Espacio entre imagen y texto */
-}
-
-/* --- LINKS --- */
-.navegacion {
-    display: flex;
-    align-items: center;
-    gap: 30px; /* Espacio entre contenedores de links */
-}
-
-nav .nav-links {
-    display: flex;
-    list-style: none; /* Quita viñetas */
-    gap: 70px; /* Espacio entre cada link */
-    font-family: 'Montserrat', sans-serif;
-}
-
-nav .nav-links li a {
-    color: #B6AAEC;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s; /* Efecto suave al hover */
+    background-color: #43766C;
+    color:#B6AAEC;
 }
 
 nav .nav-links li a:hover {
-    color: #3B2F52; /* Color al pasar el mouse */
+    color: #3B2F52;
 }
 
-/* --- HAMBURGUESA (menú móvil) --- */
-.hamburguesa {
-    display: flex;
-    flex-direction: column; /* Líneas verticales */
-    cursor: pointer; /* Cambia el cursor a mano */
-    gap: 5px; /* Espacio entre líneas */
+
+/* =================
+   ESTILOS DE IMAGEN
+   ================= */
+.contenedorObras {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* permite que los elementos bajen si no hay espacio */
 }
 
-.hamburguesa .linea {
-    width: 25px;
-    height: 3px;
-    background-color: #B6AAEC; /* Color de la línea */
-    transition: all 0.3s; /* Animación suave */
+.imagenObras,
+.descripcionObras {
+  flex: 1;
+  width: 50%;
+  min-width: 300px;
+  /* evita que se deformen demasiado */
+}
+
+.imagenObras img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.descripcionObras {
+  padding: 60px;
+  background-color: #3B2F52;
+  color: #B6AAEC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.descripcionObras h2 {
+  margin: 0;
+  font-size: 38px;
+}
+
+.descripcionObras h2:nth-of-type(2) {
+  margin-top: 2px;
+}
+
+.descripcionObras p {
+  font-size: 30px;
+  margin-top: 20px;
+  padding-right: 60px;
+  text-align: justify;
+}
+
+.descripcionObras p:nth-of-type(2) {
+    margin-top: 0;
+}
+
+/* =========
+    BOTON
+   ========= */
+.botonObras {
+  display: inline-block;
+  align-self: flex-start;
+  color: #4BBA8F;
+
+  padding: 15px 10%;
+  font-size: 1.5em;
+  font-weight: 600;
+
+  background: #1D3E3A;
+  border: #4BBA8F solid 4px;
+  border-radius: 0;
+
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+
+}
+
+.botonObras:hover {
+  transform: translateY(-3px);
+  border-color: #d1d1d1;
+}
+
+.botonObras:active {
+  transform: translateY(0);
 }
 
 /* =========================
    MAIN
    ========================= */
-main{
-    width: 99%; /* Ocupa casi todo el ancho */
-    display: flex; /* Flexbox para secciones lado a lado */
-    flex-direction: row; /* Filas horizontales */
-    margin: 1%; /* Espacio alrededor del main */
-}
 
-main section {
-    width: 49%; /* Cada sección ocupa la mitad */
-    /* height: 100%; */ /* Eliminado: permite que la altura se ajuste al contenido */
-    display: flex; /* Flexbox para organizar su contenido */
-    flex-direction: column; /* Columnas dentro de la sección */
-    gap: 5px; /* Espacio entre elementos internos */
-    box-sizing: border-box; /* Incluye padding y borde en el ancho */
-    padding: 20px; /* Espacio interno */
-}
-
-main section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Mantiene proporción de imagen */
-    display: block;
-}
-
-main section article {
-    width: 100%;
-    /* height: 70vh; */ /* Eliminamos altura fija para evitar desbordes */
-    background-color: #3B2F52; /* Fondo oscuro */
-    color: #B6AAEC; /* Color del texto */
-    font-family: "Inter", sans-serif;
-    padding: 20px; /* Espacio interno para el texto */
-    box-sizing: border-box; /* Incluye padding dentro del ancho del artículo */
-    overflow-wrap: break-word; /* Evita que palabras largas se salgan */
-}
-
-/* Encabezado de artículos */
-main section article header h1 {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 2px;
-    font-size: 40px;
-}
-
-/* Contenido principal dentro de artículo */
-main section article main{
-    width: 90%;
-    height: 65%;
-    font-size: 32px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-
-main section article main p {
-    margin-top: 10px;
-}
-
-/* Footer dentro del artículo */
-main section article footer{
-    width: 90%;
-    margin: auto;
-    height: 10%;
-}
-
-main section article footer button{
+/* BOTÓN */
+.boton {
     background-color: #1D3E3A;
     color: #4BBA8F;
-    border: 0;
-    width: 25%;
-    height: 100%;
-    font-size: 32px;
-}
-
-main section article footer button:hover{
-    color: #B6AAEC;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
     transition: all 0.3s;
+    border-radius: 5px;
+    max-width: 200px;
+    width: fit-content;
 }
 
-main span{
-    margin: 0.5%;
+.boton:hover {
+    color: #B6AAEC;
 }
 
 /* =========================
    FOOTER
    ========================= */
-body > footer {
+footer {
     background-color: #3B2F52;
     color: white;
     text-align: left;
     padding: 40px 160px;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
-    margin-top: 20px;
 }
 
-.footer_content  {
+.footer_content {
     padding-left: 15px;
 }
 
-/* Redes sociales */
 .redes_sociales {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: left;
     gap: 30px;
 }
 
 .redes_sociales li a img {
     width: 40px;
     height: 40px;
-    transition: filter 0.3s;
+    transition: transform 0.3s;
+}
+
+.redes_sociales li a img:hover {
+    transform: scale(1.2);
 }
 
 .redes_sociales .facebook img {
     width: 25px;
 }
 
-.redes_sociales li a img:hover {
-    transform: scale(1.2); /* Zoom al pasar mouse */
-}
-
 /* =========================
-   MEDIA QUERIES (RESPONSIVO)
+   MEDIA QUERIES
    ========================= */
 @media screen and (max-width: 1000px) {
-    /* Ajusta padding del navbar */
     nav {
         padding: 20px 60px;
     }
@@ -229,7 +188,6 @@ body > footer {
         justify-content: center;
     }
 
-    /* Muestra menú hamburguesa y oculta links */
     nav .nav-links {
         display: none;
         width: 100%;
@@ -239,15 +197,23 @@ body > footer {
     }
 
     nav .nav-links.active {
-        display: flex; /* Muestra links al abrir menú */
+        display: flex;
     }
 
     .hamburguesa {
         display: flex;
-        margin-right: 20px;
     }
-     
+
+    main {
+        flex-direction: column;
+    }
+
+    main section {
+        flex: 1 1 100%;
+    }
+
     footer {
-        padding: 40px 60px; /* Reduce padding en pantallas pequeñas */
+        padding: 40px 60px;
     }
 }
+
