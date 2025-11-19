@@ -1,0 +1,68 @@
+/*===========================
+    ESTILOS BARRA LATERAL
+=============================*/
+/* --- SIDEBAR  --- */
+#sidebar {
+    position: fixed;
+    top: 0;
+
+    right: -260px; 
+    left: auto;    
+    
+    width: 260px;
+    height: 100vh;
+    background: #5a473e;
+    color: white;
+    padding: 20px;
+
+    transition: right 0.3s ease;
+    z-index: 9999;
+    border-left: 4px solid #000; 
+    border-right: none; 
+
+    text-align: right;
+}
+
+/* --- PESTAÑA --- */
+#sidebar-tab {
+    position: absolute;
+    top: 40%;
+    left: -65px; 
+    right: auto;
+    
+    transform: rotate(-90deg); 
+    transform-origin: center; 
+    
+    background: #ead6b8;
+    color: #2b2b2b;
+    padding: 10px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.4);
+}
+
+#sidebar.open {
+    right: 0; 
+}
+
+.sidebar-content h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.sidebar-content h5 {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}

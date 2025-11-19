@@ -1,0 +1,38 @@
+/*
+========================================
+COLLAPSIBLE NAV-BAR
+========================================
+*/
+
+.custom-navbar {
+    background-color: #4b746c; /* El color verde del ejemplo */
+    padding: 1rem 2rem;
+}
+
+.navbar-brand .logo {
+    height: 40px; /* Ajusta según tu imagen */
+}
+
+.brand-text {
+    font-family: "Handlee", cursive; /* Parecido al estilo manuscrito de la imagen */
+    font-size: 1.5rem;
+    color: white;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: #e0e0e0 !important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Icono blanco */
+}
