@@ -224,6 +224,11 @@ nav .nav-links li a:hover {
     /* encima de la imagen */
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .trabajos_container .trabajo1 h3:nth-of-type(1) {
     /* se refiere al primer trabajo */
     right: 0;
@@ -377,29 +382,26 @@ footer {
     transform: translateY(0);
 }
 
+.img1_clas.leave {
+    opacity: 0;
+    transform: translateX(-150px); /* se va hacia la izquierda */
+}
+
+.img2_clas.leave {
+    opacity: 0;
+    transform: translateX(150px); /* se va hacia la derecha */
+}
+
 .imagen_entrada.slide-up {
     opacity: 0;
-    transform: translateY(80px); /* empieza más abajo */
+    transform: translateY(80px);
+    /* empieza más abajo */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .imagen_entrada.slide-up.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* IMAGEN DE ENTRADA */
-.imagen_entrada {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    transition: box-shadow 0.5s ease, filter 0.5s ease;
-}
-
-.imagen_entrada:hover {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    filter: brightness(1.1);
-    /* suavemente más clara */
 }
 
 /* ÚLTIMOS TRABAJOS */
@@ -412,7 +414,6 @@ footer {
 .trabajos_container img:hover {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
     filter: brightness(1.05);
-    /* más sutil que el zoom */
 }
 
 
