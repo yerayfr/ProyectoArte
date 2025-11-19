@@ -218,7 +218,7 @@ nav .nav-links li a:hover {
 /* El nombre del artista "colgando" hacia abajo */
 .titulo_artista h3 {
     position: absolute;
-    bottom: -185px;
+    bottom: -155px;
     /* lo hace colgar por debajo de la barra */
 
     background-color: #43766C;
@@ -470,4 +470,12 @@ footer {
 
 .img2_clas.visible {
     animation: slideInFromRight 1s ease-out forwards;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
 }
