@@ -396,3 +396,18 @@ footer {
     padding: 15px 30%;
   }
 }
+
+/* =========================
+   ANIMACIÓN DEL CONTENEDOR
+   ========================= */
+.contenedorObras {
+    opacity: 0;                   /* invisible al inicio */
+    transform: translateX(-100px); /* desplazada a la izquierda */
+    transition: all 1s ease-out;  /* transición suave */
+}
+
+.contenedorObras.visible {
+    opacity: 1;                   /* visible */
+    transform: translateX(0);     /* posición final */
+}
+
