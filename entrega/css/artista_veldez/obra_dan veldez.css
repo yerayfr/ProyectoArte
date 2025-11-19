@@ -1,42 +1,30 @@
 /* =================
    ESTILOS GENERALES
    ================= */
-body {
-  background-color: #1a031f;
-}
-
-/* =================
-   ESTILOS DEL NAVBAR
-   ================= */
-nav {
-  background-color: #3ea633;
-}
-
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     color: white;
-}
-
-main {
-    width: 100%;
-}
-
-body {
     background-color: #3e0941;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh; /* ocupa al menos 80% de la ventana */
+}
+
 /* =================
-   ESTILOS DEL NAVBAR
+   NAVBAR
    ================= */
 nav {
-    /*background-color: #43766C;*/
+    background-color: #3ea633;
     padding: 20px 160px;
-    padding-right: 180px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,7 +34,6 @@ nav {
 /* --- LOGO --- */
 nav .logo a {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -66,17 +53,10 @@ nav .logo p {
 }
 
 /* --- LINKS --- */
-.navegacion {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
 nav .nav-links {
     display: flex;
     list-style: none;
     gap: 70px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 nav .nav-links li a {
@@ -94,9 +74,8 @@ nav .nav-links li a:hover {
 .hamburguesa {
     display: flex;
     flex-direction: column;
-    /* Líneas apiladas verticalmente */
-    cursor: pointer;
     gap: 5px;
+    cursor: pointer;
 }
 
 .hamburguesa .linea {
@@ -107,10 +86,259 @@ nav .nav-links li a:hover {
 }
 
 /* =================
+   HEADER
+   ================= */
+main > header {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+main > header > img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.tituloArtista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 40%;
+    height: 100%;
+    padding: 0 100px;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tituloArtista h1 {
+    margin: 0 0 5px 0;
+    font-size: 3.5em;
+    color: white;
+    transform: translateY(-90px);
+}
+
+.tituloArtista h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    transform: translateY(-85px);
+}
+
+/* =================
+   CONTENEDOR DE OBRAS
+   ================= */
+.contenedorObras {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
+}
+
+.contenedorObras.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.imagenObras,
+.descripcionObras {
+    flex: 1;
+    width: 50%;
+    min-width: 300px;
+}
+
+.imagenObras img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.descripcionObras {
+    padding: 60px;
+    background-color: #9f0a3a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.descripcionObras h2 {
+    margin: 0;
+    font-size: 38px;
+}
+
+.descripcionObras h2:nth-of-type(2) {
+    margin-top: 2px;
+}
+
+.descripcionObras p {
+    font-size: 30px;
+    margin: 50px 0;
+    padding-right: 60px;
+    text-align: justify;
+}
+
+.botonObras {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 25px 150px;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 600;
+    background: linear-gradient(45deg, #fff, #d1d1d1);
+    border: 4px solid black;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.botonObras:hover {
+    transform: translateY(-3px);
+    border-color: #d1d1d1;
+}
+
+.botonObras:active {
+    transform: translateY(0);
+}
+
+/* =================
+   FOOTER
+   ================= */
+footer {
+    background-color: #3D0761;
+    color: white;
+    text-align: left;
+    padding: 40px 160px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+}
+
+.footer_content {
+    padding-left: 15px;
+}
+
+.redes_sociales {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.redes_sociales li a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.redes_sociales .facebook img {
+    width: 25px;
+}
+
+.redes_sociales li a img:hover {
+    transform: scale(1.2);
+}
+
+/* =================
+   FLECHA DE VOLVER
+   ================= */
+.flecha-volver {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 4rem;
+    color: white;
+    cursor: pointer;
+    z-index: 20;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    font-weight: 900;
+    user-select: none;
+}
+
+.imagenObras {
+    position: relative;
+}
+
+/* =================
    MEDIA QUERIES
    ================= */
+@media screen and (max-width: 1024px) {
+    .contenedorObras {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .imagenObras,
+    .descripcionObras {
+        width: 100%;
+    }
+
+    .descripcionObras {
+        padding: 40px;
+    }
+
+    .descripcionObras h2 {
+        font-size: 32px;
+    }
+
+    .descripcionObras p {
+        font-size: 24px;
+        padding-right: 0;
+    }
+
+    .botonObras {
+        font-size: 24px;
+        padding: 20px 20%;
+    }
+
+    footer {
+        padding: 40px 60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contenedorObras {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .descripcionObras {
+        padding: 25px;
+    }
+
+    .descripcionObras h2 {
+        font-size: 26px;
+    }
+
+    .descripcionObras p {
+        font-size: 18px;
+        margin: 30px 0;
+    }
+
+    .botonObras {
+        font-size: 20px;
+        padding: 15px 30%;
+    }
+}
+
 @media screen and (max-width: 1000px) {
-    /* Navbar responsivo */
     nav {
         padding: 20px 60px;
     }
@@ -135,299 +363,3 @@ nav .nav-links li a:hover {
         margin-right: 20px;
     }
 }
-
-
-/* =================
-   ESTILOS DEL NAVBAR
-   ================= */
-nav {
-    background-color:#3ea633 
-}
-
-/* =================
-   HEADER
-   ================= */
-main>header {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-main>header>img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.main {
-     width: 100%;
-    min-height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.tituloArtista {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 40%;
-    height: 100%;
-    padding: 0 100px;
-
-    text-align: left;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.1em;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.tituloArtista h1 {
-    margin: 0 0 5px 0;
-    font-size: 3.5em;
-    color: white;
-    transform: translateY(-90px);
-}
-
-.tituloArtista h2 {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: 600;
-    transform: translateY(-85px);
-}
-
-/* =================
-   FOOTER
-   ================= */
-footer {
-    background-color: #3D0761;
-    color: white;
-    text-align: left;
-    padding: 40px 160px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 25px;
-}
-
-.footer_content {
-    padding-left: 15px;
-}
-
-.redes_sociales {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: left;
-    gap: 30px;
-}
-
-.redes_sociales li a img {
-    /* Iconos de redes sociales */
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-}
-
-.redes_sociales .facebook img {
-    /* Icono de Facebook */
-    width: 25px;
-}
-
-.redes_sociales li a img:hover {
-    /* Efecto hover en iconos */
-    transform: scale(1.2);
-}
-
-/* =================
-   MEDIA QUERIES
-   ================= */
-@media screen and (max-width: 1000px) {
-    /* Footer responsivo */
-    footer {
-        padding: 40px 60px;
-    }
-}
-
-
-
-/* =================
-   ESTILOS DE IMAGEN
-   ================= */
-
-.contenedorObras {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  padding: 40px;
-  gap: 40px;
-  flex-wrap: wrap;
-  /* permite que los elementos bajen si no hay espacio */
-}
-
-.imagenObras,
-.descripcionObras {
-  flex: 1;
-  width: 50%;
-  min-width: 300px;
-  /* evita que se deformen demasiado */
-}
-
-.imagenObras img {
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.descripcionObras {
-  padding: 60px;
-  background-color: #9f0a3a;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.descripcionObras h2 {
-  margin: 0;
-  font-size: 38px;
-}
-
-.descripcionObras h2:nth-of-type(2) {
-  margin-top: 2px;
-}
-
-.descripcionObras p {
-  font-size: 30px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding-right: 60px;
-  text-align: justify;
-}
-
-.botonObras {
-  display: inline-block;
-  align-self: flex-start;
-  padding: 20px 25%;
-  color: black;
-
-  padding: 25px 150px;
-  font-size: 1.5em;
-  font-weight: 600;
-
-  background: linear-gradient(45deg, #fff, #d1d1d1);
-  border: black solid 4px;
-  border-radius: 0;
-
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-
-}
-
-.botonObras:hover {
-  transform: translateY(-3px);
-  border-color: #d1d1d1;
-}
-
-.botonObras:active {
-  transform: translateY(0);
-}
-
-/* =================
-   RESPONSIVE DESIGN
-   ================= */
-
-/* Tablets */
-@media (max-width: 1024px) {
-  .contenedorObras {
-    flex-direction: column;
-    padding: 30px;
-  }
-
-  .imagenObras,
-  .descripcionObras {
-    width: 100%;
-  }
-
-  .descripcionObras {
-    padding: 40px;
-  }
-
-  .descripcionObras h2 {
-    font-size: 32px;
-  }
-
-  .descripcionObras p {
-    font-size: 24px;
-    padding-right: 0;
-  }
-
-  .botonObras {
-    font-size: 24px;
-    padding: 20px 20%;
-  }
-}
-
-/* Móviles */
-@media (max-width: 600px) {
-  .contenedorObras {
-    padding: 20px;
-    gap: 10px;
-  }
-
-  .descripcionObras {
-    padding: 25px;
-  }
-
-  .descripcionObras h2 {
-    font-size: 26px;
-  }
-
-  .descripcionObras p {
-    font-size: 18px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .botonObras {
-    font-size: 20px;
-    padding: 15px 30%;
-  }
-}
-
-/* =========================
-   FLECHA (back button)
-   ========================= */
-.flecha-volver {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 4rem;
-  color: white;
-  cursor: pointer;
-  z-index: 20;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-  font-weight: 900;
-  user-select: none;
-}
-
-.imagenObras {
-  position: relative;
-}
-
-/* =========================
-   ANIMACIÓN DEL CONTENEDOR
-   ========================= */
-.contenedorObras {
-    opacity: 0;                   /* invisible al inicio */
-    transform: translateX(-100px); /* desplazada a la izquierda */
-    transition: all 1s ease-out;  /* transición suave */
-}
-
-.contenedorObras.visible {
-    opacity: 1;                   /* visible */
-    transform: translateX(0);     /* posición final */
-}
-
