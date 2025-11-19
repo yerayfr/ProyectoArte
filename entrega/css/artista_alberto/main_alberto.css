@@ -1,0 +1,258 @@
+body {
+    background-color: #1a031f;
+}
+
+/* =================
+   ESTILOS DEL NAVBAR
+   ================= */
+nav {
+    background-color: #56051e;
+}
+
+/* =================
+   HEADER
+   ================= */
+main>header {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+main>header>img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tituloArtista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 40%;
+    height: 100%;
+    padding: 0 100px;
+
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tituloArtista h1 {
+    margin: 0 0 5px 0;
+    font-size: 3.5em;
+    color: white;
+    transform: translateY(-90px);
+}
+
+.tituloArtista h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    transform: translateY(-85px);
+}
+
+/* =================
+   GALERÍA
+   ================= */
+main>section {
+    width: 80%;
+    margin: 5% auto;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5%;
+    row-gap: 50px;
+    /* Espacio entre filas */
+}
+
+.galeria>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 4px solid #702a84;
+}
+
+.imagenGrande {
+    grid-column: span 2;
+    /* Ocupa dos columnas */
+    width: 100%;
+    height: auto;
+}
+
+.imagenExtraGrande {
+    grid-column: span 3;
+    /* Ocupa tres columnas */
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.imagenesPequeñas {
+    aspect-ratio: 1 / 1.4;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* =================
+   FONDO DEL MAIN
+   ================= */
+
+main {
+    position: relative;
+    /* necesario para posicionar los pseudoelementos */
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    /* evita que se salgan las imágenes del contenedor */
+}
+
+main::before,
+main::after {
+    /* pseudoelementos para las imágenes de fondo */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 0;
+    /* debajo de la galería */
+    opacity: 0.5;
+    /* opcional: transparencia */
+}
+
+/* Imagen izquierda */
+main::before {
+    left: 0;
+    background-image: url("img/fondo-izquierda.svg");
+    left: -75px;
+    width: 1150px;
+    /* ajusta según tamaño */
+    height: 1150px;
+}
+
+/* Imagen derecha */
+main::after {
+    right: 0;
+    background-image: url("img/fondo-derecha.png");
+    width: 1000px;
+    /* ajusta según tamaño */
+    height: 1000px;
+}
+
+/* Asegura que la galería esté por encima */
+.galeria {
+    position: relative;
+    z-index: 1;
+}
+
+/* =================
+   BOTÓN OBRA DESTACADA
+   ================= */
+
+.botonObras {
+    position: relative;
+    z-index: 10;
+    /* hace que el botón quede encima */
+
+    display: flex;
+
+    margin: 40px auto;
+    margin-top: 80px;
+
+    padding: 18px 60px;
+    font-size: 1.3em;
+    font-weight: 600;
+    
+    color: #fff;
+    background: linear-gradient(45deg, #6a0dad, #9b30ff);
+    border: #6a0dad solid 4px;
+    border-radius: 0;
+
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.botonObras:hover {
+    transform: translateY(-3px);
+    border-color: #d1d1d1;
+}
+
+.botonObras:active {
+    transform: translateY(0);
+}
+
+
+/* =================
+   FOOTER
+   ================= */
+footer {
+    background-color: #3D0761;
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+    /* Estilos para pantallas pequeñas */
+
+    /* Header responsivo */
+    .tituloArtista {
+        font-size: 0.8em;
+    }
+
+    .tituloArtista h1 {
+        color: white;
+        font-size: 3.5em;
+        transform: translateY(-70px);
+    }
+
+    .tituloArtista h2 {
+        font-size: 2em;
+        transform: translateY(-65px);
+    }
+
+    /* La galería en pantallas pequeñas */
+    .galeria {
+        grid-template-columns: 1fr;
+        /* Solo una columna en móviles */
+        row-gap: 30px;
+    }
+
+    /* Las imágenes grandes van primero y ocupan todo el ancho */
+    .imagenGrande,
+    .imagenExtraGrande {
+        grid-column: 1 / -1;
+        /* Ocupan toda la fila */
+        order: -1;
+        /* Muevelas al inicio */
+    }
+
+    /* Ajuste opcional de tamaño o proporción */
+    .imagenGrande img,
+    .imagenExtraGrande img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*Fondo*/
+    main::before{
+        top: 600px;
+    }
+
+    .botonObras {
+        font-size: 1em;
+        padding: 14px 40px;
+        margin-top: 45px;
+    }
+}

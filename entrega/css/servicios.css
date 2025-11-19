@@ -1,0 +1,736 @@
+
+/*  
+* ================================
+* === Colores de la pagina web ===
+* ================================
+*/
+
+.imgLogo {
+   max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =================
+   ESTILOS GENERALES
+   ================= */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+:root {
+  --color-verde:#43766C;
+  --color-marron:#513F3C;
+  --color-blanco:#FFFFFF;
+}
+
+/*  
+* ================================
+* === Clases de la web ===
+* ================================
+*/
+
+nav {
+    background-color: #43766C;
+    padding: 20px 160px;
+    padding-right: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* --- LOGO --- */
+nav .logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+nav .logo img {
+    height: 60px;
+}
+
+nav .logo p {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: normal;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* --- LINKS --- */
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    color: #D9E3E1;
+}
+
+/* --- HAMBURGUESA --- */
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    /* Líneas apiladas verticalmente */
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburguesa .linea {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/*
+* =======================
+* ==  HERO SECTION     ==
+* =======================
+*/
+
+.heroSection {
+  background-image: url(../img/imagenes/lobos_hero.jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  height: 700px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  display:flex;
+  justify-content: right;
+  padding: 20px;
+  margin: 30px;
+}
+
+.heroContent {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.titleContent {
+  width: calc(100%-60px);
+  height: 100px;
+  border-radius: 12px;
+  border: inherit 1px solid;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+}
+
+.titleContent_text1 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  color: var(--color-blanco);
+  font-weight: 200;
+  font-style: italic;
+}
+
+.titleContent_text2 {
+  margin: 0;
+  padding: 0;
+  font-size: 50px
+}
+
+.descriptionContent {
+  width: calc(100% - 60px);
+  height: 400px;
+  border-radius: 12px;
+  border: inherit 1px solid;
+   padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.descriptionContent > p {
+  font-size: 25px;
+  color: var(--color-blanco);
+}
+
+.buttonContent {
+  padding: 20px;
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  width: 100%;
+  transition: 0.3s;
+  border: none;
+}
+
+.buttonContent:hover {
+  background-color: var(--color-blanco);
+  color: var(--color-verde);
+  border-color: var(--color-blanco);
+  transform: translateY(-3px)
+}
+
+/*  
+* ================================
+* === Seccion de las categorias (cards) ===
+* ================================
+*/
+
+.categoriesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin: 30px 100px;
+}
+
+.firstTitle {
+  font-size: 40px;
+  color: black;
+  margin:0;
+  padding: 0;
+}
+
+.secondTitle {
+  font-size: 35px;
+  font-weight: 100;
+  color: black;
+  margin:0;
+  padding: 0;
+}
+
+.cardConteiner {
+  margin: 20px;
+  width: calc(100% - 20px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 calc(25% - 60px); 
+  aspect-ratio: 3 / 3;        
+  background: var(--color-blanco);      
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:space-between;
+  padding: 20px;
+  
+  box-shadow: 0 0 0 0 var(--color-verde),
+              2px 2px 5px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover { 
+  box-shadow: inset 0 0 0 6px var(--color-verde),
+              2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.card > div {
+  text-align: center;
+}
+
+.card > div > h3 {
+  font-size: 40px;
+  color: var(--color-blanco);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.card > div > p {
+  font-size: 35px;
+  color: var(--color-blanco);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.fondoPintura {
+  background-image: url(../img/imagenes/fondoPintura.jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+}
+
+.fondoFotografia {
+  background-image: url(../img/imagenes/fondoFotografia.jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+}
+
+.fondoEscultura {
+  background-image: url(../img/imagenes/fondoEscultura.jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+}
+
+.fondoArteDigital {
+  background-image: url(../img/imagenes/fondoArteDigital.jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+}
+
+.fondoIlustracion {
+  background-image: url(../img/imagenes/fondoIlustracion.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+.fondoImaginacionVisual {
+  background-image: url(../img/imagenes/fondoImaginacionVisual.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+.fondoComposicion {
+  background-image: url(../img/imagenes/fondoComposicion.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+.fondoConceptArt {
+  background-image: url(../img/imagenes/fondoConceptArt.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+/*  
+* ================================
+* === Carrusel ===
+* ================================
+*/
+
+.carruselSection {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--color-blanco);
+  margin-bottom: 40px;
+}
+
+/* El wrapper es el área visible */
+.carrusel-wrapper {
+  width: 550px; /* 3 elementos visibles de 120px + 2 gaps de 20px = 460px */
+  overflow: hidden; /* oculta los demás */
+}
+
+.firstTitleCarrusel {
+  font-size: 40px;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.secondTitleCarrusel {
+  font-size: 35px;
+  font-weight: 100;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 40px;
+
+}
+
+.carrusel-contenedor {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.artista img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  
+}
+
+.carrusel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: white;
+}
+
+.flecha {
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.flecha:hover {
+  background: var(--color-verde);
+}
+
+
+/*  
+* ================================
+* === Formulario ===
+* ================================
+*/
+
+.formSection {
+  background-color: #c7c7c7;
+  text-align: center;
+  padding: 90px;
+
+}
+
+.formulario-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:20px;
+  background-color: #c7c7c7;
+}
+
+#nombre,
+#apellido {
+  grid-column: span 1;
+  padding: 20px;
+  border: none;
+  color: black;
+  background-color: white;
+}
+
+#email,
+#numeroTelefono,
+#tematica,
+#formButton {
+  grid-column: span 2;
+  padding: 20px;
+  border: none;
+  color: black;
+  background-color: white;
+}
+
+#nombre:focus {
+  border: 1px solid black;
+}
+
+#apellido:focus {
+  border: 1px solid black;
+}
+
+#email:focus {
+  border: 1px solid black;
+}
+
+#numeroTelefono:focus {
+  border: 1px solid black;
+}
+
+#tematica:focus {
+  border: 1px solid black;
+}
+
+#formButton {
+  font-weight: bold;
+  background-color: var(--color-verde);
+  transition: 0.3s;
+  color: white;
+}
+
+#formButton:hover {
+  background-color: var(--color-blanco);
+  color: black;
+
+}
+
+.firstTitleform {
+  font-size: 40px;
+  color: var(--color-blanco);
+  font-weight: bold;
+}
+
+.secondTitleForm {
+  font-size: 35px;
+  font-weight: 100;
+  color:var(--color-blanco);
+  margin-bottom: 20px;
+  font-weight: bold;
+  
+}
+
+/* =================
+   FOOTER
+   ================= */
+
+footer {
+    background-color: #513F3C;
+    color: white;
+    text-align: left;
+    padding: 40px 160px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.footer_content  {
+    padding-left: 15px;
+}
+
+.redes_sociales { /* Lista de redes sociales */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+}
+
+.redes_sociales li a img { /* Estilo común para todos los iconos */
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s;
+}
+
+.redes_sociales .facebook img { /* Icono de Facebook */
+    width: 25px;
+}
+
+.redes_sociales li a img:hover { /* Efecto hover para todos los iconos */
+    transform: scale(1.2);
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+
+  /* --- NAVBAR --- */
+  nav {
+    padding: 20px 60px;
+  }
+
+  nav .logo a {
+    justify-content: center;
+  }
+
+  nav .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  .hamburguesa {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  /* --- HERO SECTION --- */
+  .heroSection {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .heroContent {
+    width: 100%;
+    align-items: center;
+  }
+
+  .titleContent {
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .titleContent_text1 {
+    font-size: 28px;
+  }
+
+  .titleContent_text2 {
+    font-size: 32px;
+  }
+
+  .descriptionContent {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .descriptionContent p {
+    font-size: 20px;
+  }
+
+  .buttonContent {
+    width: 80%;
+    padding: 15px;
+
+  }
+
+  /* --- CATEGORIES SECTION --- */
+  .categoriesSection {
+    margin: 20px 40px;
+  }
+
+  .firstTitle {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .secondTitle {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .cardConteiner {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    flex: none;
+    width: 90%;
+    aspect-ratio: auto;
+  }
+
+  .card > div > h3 {
+    font-size: 28px;
+  }
+
+  .card > div > p {
+    font-size: 22px;
+  }
+
+  /* --- CARRUSEL SECTION --- */
+  .carruselSection {
+    margin: 40px 20px;
+    padding: 20px;
+  }
+
+  .carrusel-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .firstTitleCarrusel {
+    font-size: 30px;
+  }
+
+  .secondTitleCarrusel {
+    font-size: 25px;
+  }
+
+  .artista img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .flecha {
+    padding: 8px 12px;
+    font-size: 1.5rem;
+  }
+
+  /* --- FORM SECTION --- */
+  .formSection {
+    padding: 40px 20px;
+  }
+
+  .formulario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #nombre,
+  #apellido,
+  #email,
+  #numeroTelefono,
+  #tematica,
+  #formButton {
+    grid-column: span 1;
+    padding: 15px;
+  }
+
+  .firstTitleform {
+    font-size: 30px;
+  }
+
+  .secondTitleForm {
+    font-size: 24px;
+  }
+
+  /* --- FOOTER --- */
+
+  .footer_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_content h3 {
+    margin-bottom: 15px;
+  }
+
+  .redes_sociales {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .redes_sociales li a img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .redes_sociales .facebook img {
+    width: 22px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

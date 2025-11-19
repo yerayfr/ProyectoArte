@@ -1,0 +1,225 @@
+body{
+    margin: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: #96746E;
+}
+
+nav {
+    background-color: #43766C;
+    padding: 20px 160px;
+    padding-right: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* --- LOGO --- */
+nav .logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+nav .logo img {
+    height: 60px;
+}
+
+nav .logo p {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: normal;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* --- LINKS --- */
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    color: #D9E3E1;
+}
+
+/* --- HAMBURGUESA --- */
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    /* Líneas apiladas verticalmente */
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburguesa .linea {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+
+main{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2%;
+    width: 90%;
+    height: 80%;
+    background-color: #634A45;
+    border: #4E3B38 solid 2vw;
+    border-bottom: 0;
+}
+
+main > header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+main > header > h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 42px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+section {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article {
+    width: 20%;
+    height: 70%;
+    margin: auto;
+    transform: translateY(0);
+    box-shadow: 0 10px 25px rgba(0,0,0,0); 
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+article:hover {
+    transform: translateY(-5%);  
+    box-shadow: 0 20px 35px rgba(0,0,0,0.3); 
+}
+
+article > a{
+    text-decoration: none;
+}
+
+article > a > img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover; 
+    display: block;
+}
+
+article > a > footer{
+    width: 100%;
+    height: 20%;
+    background-color: #43766C;
+    display: flex;
+    align-items: center;
+}
+
+article > a > footer > h2{
+    margin: auto;
+    color: white;
+    font-size: 28px;
+}
+
+body > footer {
+    background-color: #513F3C;
+    color: white;
+    text-align: left;
+    padding: 40px 160px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.footer_content  {
+    padding-left: 15px;
+}
+
+.redes_sociales { /* Lista de redes sociales */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+}
+
+.redes_sociales li a img { /* Estilo común para todos los iconos */
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s;
+}
+
+.redes_sociales .facebook img { /* Icono de Facebook */
+    width: 25px;
+}
+
+.redes_sociales li a img:hover { /* Efecto hover para todos los iconos */
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 1000px) {
+    /* --- NAVBAR --- */
+    nav {
+        padding: 20px 60px;
+    }
+
+    nav .logo a {
+        justify-content: center;
+    }
+
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    .hamburguesa {
+        display: flex;
+        margin-right: 20px;
+    }
+     
+    footer {
+        padding: 40px 60px;
+    }
+}
