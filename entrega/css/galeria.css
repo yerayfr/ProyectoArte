@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0%;
     width: 100%;
     height: 100vh;
@@ -79,7 +79,7 @@ nav .nav-links li a:hover {
 }
 
 
-main{
+main {
     margin-right: auto;
     margin-left: auto;
     margin-top: 2%;
@@ -90,16 +90,17 @@ main{
     border-bottom: 0;
 }
 
-main > header{
+main>header {
     width: 100%;
-    height: 15%;
+    margin-top: 5vh;
+    height: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
 }
 
-main > header > h1 {
+main>header>h1 {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 42px;
@@ -122,27 +123,27 @@ article {
     height: 70%;
     margin: auto;
     transform: translateY(0);
-    box-shadow: 0 10px 25px rgba(0,0,0,0); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 article:hover {
-    transform: translateY(-5%);  
-    box-shadow: 0 20px 35px rgba(0,0,0,0.3); 
+    transform: translateY(-5%);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
 }
 
-article > a{
+article>a {
     text-decoration: none;
 }
 
-article > a > img {
+article>a>img {
     width: 100%;
     height: 80%;
-    object-fit: cover; 
+    object-fit: cover;
     display: block;
 }
 
-article > a > footer{
+article>a>footer {
     width: 100%;
     height: 20%;
     background-color: #43766C;
@@ -150,13 +151,13 @@ article > a > footer{
     align-items: center;
 }
 
-article > a > footer > h2{
+article>a>footer>h2 {
     margin: auto;
     color: white;
     font-size: 28px;
 }
 
-body > footer {
+body>footer {
     background-color: #513F3C;
     color: white;
     text-align: left;
@@ -166,11 +167,12 @@ body > footer {
     margin-top: 20px;
 }
 
-.footer_content  {
+.footer_content {
     padding-left: 15px;
 }
 
-.redes_sociales { /* Lista de redes sociales */
+.redes_sociales {
+    /* Lista de redes sociales */
     list-style: none;
     padding: 0;
     display: flex;
@@ -178,21 +180,25 @@ body > footer {
     gap: 30px;
 }
 
-.redes_sociales li a img { /* Estilo común para todos los iconos */
+.redes_sociales li a img {
+    /* Estilo común para todos los iconos */
     width: 40px;
     height: 40px;
     transition: filter 0.3s;
 }
 
-.redes_sociales .facebook img { /* Icono de Facebook */
+.redes_sociales .facebook img {
+    /* Icono de Facebook */
     width: 25px;
 }
 
-.redes_sociales li a img:hover { /* Efecto hover para todos los iconos */
+.redes_sociales li a img:hover {
+    /* Efecto hover para todos los iconos */
     transform: scale(1.2);
 }
 
 @media screen and (max-width: 1000px) {
+
     /* --- NAVBAR --- */
     nav {
         padding: 20px 60px;
@@ -218,11 +224,15 @@ body > footer {
         display: flex;
         margin-right: 20px;
     }
-     
+
     footer {
         padding: 40px 60px;
     }
 }
+
+/* ====
+    ANIMACIONES SLIDE UP
+==== */
 
 .slide-up {
     opacity: 0;
