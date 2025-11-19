@@ -133,7 +133,7 @@ main::after {
 /* Imagen izquierda */
 main::before {
     left: 0;
-    background-image: url("img/fondo-izquierda.svg");
+    background-image: url("../../img/artista_alberto/fondo/fondo-izquierda.svg");
     left: -75px;
     width: 1150px;
     /* ajusta según tamaño */
@@ -143,7 +143,7 @@ main::before {
 /* Imagen derecha */
 main::after {
     right: 0;
-    background-image: url("img/fondo-derecha.png");
+    background-image: url("../../img/artista_alberto/fondo/fondo-derecha.png");
     width: 1000px;
     /* ajusta según tamaño */
     height: 1000px;
