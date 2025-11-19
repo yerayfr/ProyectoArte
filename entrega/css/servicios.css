@@ -138,10 +138,10 @@ nav .nav-links li a:hover {
 }
 
 .titleContent {
-  width: calc(100%-60px);
-  height: 100px;
+  width: calc(100% - 60px); /* espacio entre 100% y -60px */
+  height: 30vh;
   border-radius: 12px;
-  border: inherit 1px solid;
+  border: 1px solid inherit; /* mejor poner el valor primero */
 
   background-color: rgba(0, 0, 0, 0.6);
   padding: 30px;
@@ -159,7 +159,7 @@ nav .nav-links li a:hover {
 .titleContent_text2 {
   margin: 0;
   padding: 0;
-  font-size: 50px
+  font-size: 50px; /* faltaba el ; */
 }
 
 .descriptionContent {

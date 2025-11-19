@@ -3,12 +3,12 @@
    ================= */
 nav {
     /*background-color: #43766C;*/
-    padding: 20px 160px;
-    padding-right: 180px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    max-width: 1600px; /* opcional, para pantallas muy grandes */
+    margin: 0 auto; /* centra el nav si tiene max-width */
 }
 
 /* --- LOGO --- */

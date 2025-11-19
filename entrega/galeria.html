@@ -5,66 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria</title>
-    <link rel="stylesheet" href="/css/galeria.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/logo.svg">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/generales/generales.css">
+    <link rel="stylesheet" href="/css/galeria.css">
+    <!-- JS -->
+    <script src="javascript/slideup.js"></script>
     <!-- Enlace a Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-            <nav class="navbar navbar-expand-lg custom-navbar">
-                <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid">
 
-                    <!-- Logo + Nombre -->
-                    <a class="navbar-brand d-flex align-items-center" href="index.html">
-                        <img src="img/logo.svg" alt="Logo" class="logo">
-                        <span class="brand-text ms-2">Driftwood Visions</span>
-                    </a>
+                <!-- Logo + Nombre -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/logo.svg" alt="Logo" class="logo">
+                    <span class="brand-text ms-2">Driftwood Visions</span>
+                </a>
 
-                    <!-- Botón hamburguesa -->
-                    <button class="navbar-toggler" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <!-- Menú colapsable -->
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-                        <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-5">
-                            <li class="nav-item">
-                                <a class="nav-link" href="galeria.html">Galería</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contacto.html">Contacto</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="sobrenosotros.html">Sobre nosotros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="servicios.html">Servicios</a>
-                            </li>
-                        </ul>
-                    </div>
-
+                <!-- Menú colapsable -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobrenosotros.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+
+            </div>
+        </nav>
+    </header>
     <main>
 
         <header>
-            <h1>Artistas</h1>
+            <h1 class="slide-up">Artistas</h1>
         </header>
-
-        <section>
-
+        <section class="slide-up">
             <article>
                 <a href="html_artistas/main_jen_zee.html">
                     <img src="./img/galeria/Jen Zee.webp">
@@ -73,7 +75,6 @@
                     </footer>
                 </a>
             </article>
-
             <article>
                 <a href="html_artistas/main_tyler_edlin.html">
                     <img src="./img/galeria/Tyler Edlin.jpg">
@@ -82,7 +83,6 @@
                     </footer>
                 </a>
             </article>
-
             <article>
                 <a href="html_artistas/main_alberto_mielgo.html">
                     <img src="./img/galeria/Alberto Mielgo.jpg">
@@ -90,9 +90,7 @@
                         <h2>Alberto Mielgo</h2>
                     </footer>
                 </a>
-
             </article>
-
             <article>
                 <a href="html_artistas/main_dan_velez.html">
                     <img src="./img/galeria/Dan Velez.jpg">
@@ -122,7 +120,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.getElementById("sidebar-tab").addEventListener("click", function() {
+        document.getElementById("sidebar-tab").addEventListener("click", function () {
             document.getElementById("sidebar").classList.toggle("open");
         });
     </script>
