@@ -18,6 +18,19 @@ body {
     color: white;
 }
 
+main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #96746E;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* =================
    ESTILOS DEL NAVBAR
    ================= */
