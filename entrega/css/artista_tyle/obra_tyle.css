@@ -1,0 +1,235 @@
+/* =================
+   ESTILOS GENERALES
+   ================= */
+body {
+  background-color: #BFBFBF;
+}
+
+/* =================
+   ESTILOS DEL NAVBAR
+   ================= */
+nav {
+  background-color: #401E2F;
+}
+
+
+/* =================
+   ESTILOS DE IMAGEN
+   ================= */
+.contenedorObras {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* permite que los elementos bajen si no hay espacio */
+  color: white
+}
+
+.imagenObras,
+.descripcionObras {
+  flex: 1;
+  width: 50%;
+  min-width: 300px;
+  /* evita que se deformen demasiado */
+}
+
+/* Contenedor de la imagen */
+.imagenObras {
+  position: relative;
+  width: 50%;
+  min-width: 300px;
+}
+
+/* Imagen */
+.imagenObras img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* BOTÓN DE VOLVER AL MAIN DE ARTISTA */
+/* Área clicable real */
+.imagenObras a.flechaVolver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;       /* antes 42px */
+  height: 60px;      /* antes 42px */
+  z-index: 30;
+  text-decoration: none;
+}
+
+/* Botón visual */
+.imagenObras a.flechaVolver::before {
+  content: "←";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50%;
+
+  color: white;
+  font-size: 2.4rem;   /* antes 1.6rem */
+  font-weight: bold;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+}
+
+/* Hover */
+.imagenObras a.flechaVolver:hover::before {
+  background: rgba(0, 0, 0, 0.55);
+  transform: scale(1.08);
+  transition: 0.2s ease;
+}
+
+
+.descripcionObras {
+  padding: 60px;
+  background-color: #401E2F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.descripcionObras h2 {
+  margin: 0;
+  font-size: 38px;
+}
+
+.descripcionObras h2:nth-of-type(2) {
+  margin-top: 2px;
+}
+
+.descripcionObras p {
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-right: 60px;
+  text-align: justify;
+}
+
+.botonObras {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 20px 25%;
+  color: black;
+
+  padding: 25px 150px;
+  font-size: 1.5em;
+  font-weight: 600;
+
+  background: linear-gradient(45deg, #fff, #d1d1d1);
+  border: #6a0dad solid 4px;
+  border-radius: 0;
+
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+
+}
+
+.botonObras:hover {
+  transform: translateY(-3px);
+  border-color: #d1d1d1;
+}
+
+.botonObras:active {
+  transform: translateY(0);
+}
+
+
+
+/* =================
+   ESTILOS DEL FOOTER
+   ================= */
+
+footer {
+    background-color: #401E2F;
+}
+
+/* =================
+   RESPONSIVE DESIGN
+   ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .contenedorObras {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .imagenObras,
+  .descripcionObras {
+    width: 100%;
+  }
+
+  .descripcionObras {
+    padding: 40px;
+  }
+
+  .descripcionObras h2 {
+    font-size: 32px;
+  }
+
+  .descripcionObras p {
+    font-size: 24px;
+    padding-right: 0;
+  }
+
+  .botonObras {
+    font-size: 24px;
+    padding: 20px 20%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .contenedorObras {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .descripcionObras {
+    padding: 25px;
+  }
+
+  .descripcionObras h2 {
+    font-size: 26px;
+  }
+
+  .descripcionObras p {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .botonObras {
+    font-size: 20px;
+    padding: 15px 30%;
+  }
+}
+
+/* =========================
+   ANIMACIÓN DEL CONTENEDOR
+   ========================= */
+.contenedorObras {
+    opacity: 0;                   /* invisible al inicio */
+    transform: translateX(-100px); /* desplazada a la izquierda */
+    transition: all 1s ease-out;  /* transición suave */
+}
+
+.contenedorObras.visible {
+    opacity: 1;                   /* visible */
+    transform: translateX(0);     /* posición final */
+}
