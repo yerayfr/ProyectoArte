@@ -48,6 +48,8 @@ CSS Contacto
     background-color: #2e2e2e;
     overflow: auto; /* use auto instead of scroll to avoid extra scrollbars */
     margin: 0; /* remove default margin */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .left{
