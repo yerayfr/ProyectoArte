@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const trabajos = document.querySelectorAll('.img1_clas, .img2_clas');
+    const elementos = document.querySelectorAll('.img1_clas, .img2_clas, .slide-up, .imagen_entrada');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // se anima solo una vez
+            const el = entry.target; // ✅ referencia correcta al elemento
+
+            if (entry.isIntersecting) {
+                el.classList.add('visible');
+                el.classList.remove('leave');
+            } else {
+                el.classList.remove('visible');
+                el.classList.add('leave'); // se va hacia el lado correspondiente
             }
         });
-    }, {
-        threshold: 0.2 // se activa cuando 20% del elemento es visible
-    });
+    }, { threshold: 0.05 });
 
-    trabajos.forEach(trabajo => observer.observe(trabajo));
+    elementos.forEach(el => observer.observe(el));
 });
