@@ -33,6 +33,7 @@ main>header>img {
     position: absolute;
     top: 0;
     right: 0;
+    width: 200vh;
     max-width: 40%;
     height: 100%;
     padding: 0 100px;
@@ -48,6 +49,7 @@ main>header>img {
     font-size: 3.5em;
     color: white;
     transform: translateY(-90px);
+    font-family: "Advent Pro", sans-serif;
 }
 
 .tituloArtista h2 {
@@ -60,9 +62,18 @@ main>header>img {
 /* =================
    GALERÍA
    ================= */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
 main>section {
-    width: 80%;
-    margin: 5% auto;
+    width: 95%;
+    margin: 2.5% 2.5%;
     background-color: #BFBFBF;
     padding: 5%;
 }
@@ -117,38 +128,42 @@ main {
     /* evita que se salgan las imágenes del contenedor */
 }
 
+main {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+/* Estilos comunes */
 main::before,
 main::after {
-    /* pseudoelementos para las imágenes de fondo */
     content: "";
     position: absolute;
     bottom: 0;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     z-index: 0;
-    /* debajo de la galería */
-    opacity: 0.5;
-    /* opcional: transparencia */
-}
-
-/* Imagen izquierda */
-main::before {
-    left: 0;
-    background-image: url("img/fondo-izquierda.svg");
-    left: -75px;
-    width: 1150px;
-    /* ajusta según tamaño */
-    height: 1150px;
 }
 
 /* Imagen derecha */
+main::before {
+    top: 40%;
+    left: -5%;
+    background-image: url("../../img/artista_tyle/fondo/fondo-izquierda.svg");
+    transform: rotate(180deg);
+    width: 1250px;
+    height: 1250px;
+}
+
+/* Imagen izquierda */
 main::after {
-    right: 0;
-    background-image: url("img/fondo-derecha.png");
-    width: 1000px;
-    /* ajusta según tamaño */
-    height: 1000px;
+    bottom: 0;
+    right: -14%;
+    background-image: url("../../img/artista_tyle/fondo/fondo-izquierda.svg");
+    width: 1250px;
+    height: 1250px;
 }
 
 /* Asegura que la galería esté por encima */
@@ -174,7 +189,7 @@ main::after {
     padding: 18px 60px;
     font-size: 1.3em;
     font-weight: 600;
-    
+
     color: #fff;
     background: linear-gradient(45deg, #6A6196, #401E2F);
     border: #401E2F solid 4px;
@@ -232,8 +247,8 @@ footer {
         row-gap: 30px;
     }
 
-    .magenImagen{
-        
+    .magenImagen {
+
         width: 10px;
         height: 10px;
     }
@@ -255,7 +270,7 @@ footer {
     }
 
     /*Fondo*/
-    main::before{
+    main::before {
         top: 600px;
     }
 
@@ -264,18 +279,28 @@ footer {
         padding: 14px 40px;
         margin-top: 45px;
     }
+
+    main::before {
+        left: -15%;
+        top: 10%;
+    }
 }
 
 /* =================
    ANIMACIÓN SUAVE AL SCROLL
    ================= */
 .galeria img {
-    opacity: 0;              /* inicial transparente */
-    transform: translateY(50px); /* baja un poco */
-    transition: all 1s ease-out; /* transición suave */
+    opacity: 0;
+    /* inicial transparente */
+    transform: translateY(50px);
+    /* baja un poco */
+    transition: all 1s ease-out;
+    /* transición suave */
 }
 
 .galeria img.visible {
-    opacity: 1;              /* visible */
-    transform: translateY(0); /* vuelve a su posición */
+    opacity: 1;
+    /* visible */
+    transform: translateY(0);
+    /* vuelve a su posición */
 }

@@ -6,7 +6,7 @@ body {
    ESTILOS DEL NAVBAR
    ================= */
 nav {
-    background-color: #43766C;
+    background-color: #56051E;
     padding: 20px 160px;
     padding-right: 180px;
     display: flex;
@@ -278,6 +278,7 @@ footer {
 
     /* Header responsivo */
     .tituloArtista {
+        padding-top: 10vh;
         font-size: 0.8em;
     }
 

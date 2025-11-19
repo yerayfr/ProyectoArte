@@ -13,7 +13,7 @@ body {
       NAVBAR
    ============= */
 nav {
-    background-color: #43766C;
+    background-color: #1D3E3A;
     padding: 20px 160px;
     display: flex;
     align-items: center;
@@ -21,6 +21,7 @@ nav {
     flex-wrap: wrap;
     position: relative;
     z-index: 10;
+    color:#B6AAEC;
 }
 
 /* --- LOGO --- */
