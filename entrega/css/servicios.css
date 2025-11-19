@@ -115,7 +115,7 @@ nav .nav-links li a:hover {
 */
 
 .heroSection {
-  background-image: url(../img/imagenes/lobos_hero.jpg);
+  background-image: url(../img/servicios/lobos_hero.jpg);
   background-size:cover;
   background-position:bottom;
   background-repeat: no-repeat;
@@ -269,56 +269,56 @@ nav .nav-links li a:hover {
 }
 
 .fondoPintura {
-  background-image: url(../img/imagenes/fondoPintura.jpg);
+  background-image: url(../img/servicios/fondoPintura.jpg);
   background-size:cover;
   background-position:bottom;
   background-repeat: no-repeat;
 }
 
 .fondoFotografia {
-  background-image: url(../img/imagenes/fondoFotografia.jpg);
+  background-image: url(../img/servicios/fondoFotografia.jpg);
   background-size:cover;
   background-position:bottom;
   background-repeat: no-repeat;
 }
 
 .fondoEscultura {
-  background-image: url(../img/imagenes/fondoEscultura.jpg);
+  background-image: url(../img/servicios/fondoEscultura.jpg);
   background-size:cover;
   background-position:bottom;
   background-repeat: no-repeat;
 }
 
 .fondoArteDigital {
-  background-image: url(../img/imagenes/fondoArteDigital.jpg);
+  background-image: url(../img/servicios/fondoArteDigital.jpg);
   background-size:cover;
   background-position:bottom;
   background-repeat: no-repeat;
 }
 
 .fondoIlustracion {
-  background-image: url(../img/imagenes/fondoIlustracion.jpg);
+  background-image: url(../img/servicios/fondoIlustracion.jpg);
   background-size:cover;
   background-position:center;
   background-repeat: no-repeat;
 }
 
 .fondoImaginacionVisual {
-  background-image: url(../img/imagenes/fondoImaginacionVisual.jpg);
+  background-image: url(../img/servicios/fondoImaginacionVisual.jpg);
   background-size:cover;
   background-position:center;
   background-repeat: no-repeat;
 }
 
 .fondoComposicion {
-  background-image: url(../img/imagenes/fondoComposicion.jpg);
+  background-image: url(../img/servicios/fondoComposicion.jpg);
   background-size:cover;
   background-position:center;
   background-repeat: no-repeat;
 }
 
 .fondoConceptArt {
-  background-image: url(../img/imagenes/fondoConceptArt.jpg);
+  background-image: url(../img/servicios/fondoConceptArt.jpg);
   background-size:cover;
   background-position:center;
   background-repeat: no-repeat;

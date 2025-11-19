@@ -142,6 +142,7 @@ CSS Contacto
 ========================================
 */
 
+
 .mid-section {
     display: flex;
     width: 100%;
@@ -264,7 +265,7 @@ CSS Contacto
 FOOTER
 ================= */
 footer {
-    background-color: #3D0761;
+    background-color: #513F3C;
     color: white;
     text-align: left;
     padding: 40px 160px;
@@ -367,4 +368,14 @@ footer {
 .sidebar-content h5 {
     margin-top: 20px;
     font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
 }

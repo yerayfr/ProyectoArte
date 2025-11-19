@@ -16,6 +16,7 @@ main>header {
     position: relative;
     width: 100%;
     height: auto;
+    color: white;
 }
 
 main>header>img {

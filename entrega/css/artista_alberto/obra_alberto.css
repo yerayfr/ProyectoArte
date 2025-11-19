@@ -24,6 +24,7 @@ nav {
   gap: 20px;
   flex-wrap: wrap;
   /* permite que los elementos bajen si no hay espacio */
+  color: white
 }
 
 .imagenObras,
@@ -34,12 +35,62 @@ nav {
   /* evita que se deformen demasiado */
 }
 
+/* Contenedor de la imagen */
+.imagenObras {
+  position: relative;
+  width: 50%;
+  min-width: 300px;
+}
+
+/* Imagen */
 .imagenObras img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
 }
+
+
+/* BOTÓN DE VOLVER AL MAIN DE ARTISTA */
+/* Área clicable real */
+.imagenObras a.flechaVolver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;       /* antes 42px */
+  height: 60px;      /* antes 42px */
+  z-index: 30;
+  text-decoration: none;
+}
+
+/* Botón visual */
+.imagenObras a.flechaVolver::before {
+  content: "←";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50%;
+
+  color: white;
+  font-size: 2.4rem;   /* antes 1.6rem */
+  font-weight: bold;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+}
+
+/* Hover */
+.imagenObras a.flechaVolver:hover::before {
+  background: rgba(0, 0, 0, 0.55);
+  transform: scale(1.08);
+  transition: 0.2s ease;
+}
+
 
 .descripcionObras {
   padding: 60px;
@@ -95,6 +146,16 @@ nav {
 
 .botonObras:active {
   transform: translateY(0);
+}
+
+
+
+/* =================
+   ESTILOS DEL FOOTER
+   ================= */
+
+footer {
+    background-color: #3D0761;
 }
 
 /* =================
