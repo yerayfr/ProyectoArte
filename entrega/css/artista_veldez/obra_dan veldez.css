@@ -1,0 +1,398 @@
+/* =================
+   ESTILOS GENERALES
+   ================= */
+body {
+  background-color: #1a031f;
+}
+
+/* =================
+   ESTILOS DEL NAVBAR
+   ================= */
+nav {
+  background-color: #3ea633;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+main {
+    width: 100%;
+}
+
+body {
+    background-color: #3e0941;
+}
+
+/* =================
+   ESTILOS DEL NAVBAR
+   ================= */
+nav {
+    /*background-color: #43766C;*/
+    padding: 20px 160px;
+    padding-right: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* --- LOGO --- */
+nav .logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+nav .logo img {
+    height: 60px;
+}
+
+nav .logo p {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: normal;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* --- LINKS --- */
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    color: #D9E3E1;
+}
+
+/* --- HAMBURGUESA --- */
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    /* Líneas apiladas verticalmente */
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburguesa .linea {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+    /* Navbar responsivo */
+    nav {
+        padding: 20px 60px;
+    }
+
+    nav .logo a {
+        justify-content: center;
+    }
+
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    .hamburguesa {
+        margin-right: 20px;
+    }
+}
+
+
+/* =================
+   ESTILOS DEL NAVBAR
+   ================= */
+nav {
+    background-color:#3ea633 
+}
+
+/* =================
+   HEADER
+   ================= */
+main>header {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+main>header>img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main {
+     width: 100%;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.tituloArtista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 40%;
+    height: 100%;
+    padding: 0 100px;
+
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tituloArtista h1 {
+    margin: 0 0 5px 0;
+    font-size: 3.5em;
+    color: white;
+    transform: translateY(-90px);
+}
+
+.tituloArtista h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    transform: translateY(-85px);
+}
+
+/* =================
+   FOOTER
+   ================= */
+footer {
+    background-color: #3D0761;
+    color: white;
+    text-align: left;
+    padding: 40px 160px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+}
+
+.footer_content {
+    padding-left: 15px;
+}
+
+.redes_sociales {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+}
+
+.redes_sociales li a img {
+    /* Iconos de redes sociales */
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.redes_sociales .facebook img {
+    /* Icono de Facebook */
+    width: 25px;
+}
+
+.redes_sociales li a img:hover {
+    /* Efecto hover en iconos */
+    transform: scale(1.2);
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+    /* Footer responsivo */
+    footer {
+        padding: 40px 60px;
+    }
+}
+
+
+
+/* =================
+   ESTILOS DE IMAGEN
+   ================= */
+
+.contenedorObras {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+  /* permite que los elementos bajen si no hay espacio */
+}
+
+.imagenObras,
+.descripcionObras {
+  flex: 1;
+  width: 50%;
+  min-width: 300px;
+  /* evita que se deformen demasiado */
+}
+
+.imagenObras img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.descripcionObras {
+  padding: 60px;
+  background-color: #9f0a3a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.descripcionObras h2 {
+  margin: 0;
+  font-size: 38px;
+}
+
+.descripcionObras h2:nth-of-type(2) {
+  margin-top: 2px;
+}
+
+.descripcionObras p {
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-right: 60px;
+  text-align: justify;
+}
+
+.botonObras {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 20px 25%;
+  color: white;
+
+  padding: 25px 150px;
+  font-size: 1.5em;
+  font-weight: 600;
+
+  background: linear-gradient(45deg, #3ea633, #3ea633);
+  border: #3ea633 solid 4px;
+  border-radius: 0;
+
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+
+}
+
+.botonObras:hover {
+  transform: translateY(-3px);
+  border-color: #702a84 ;
+}
+
+.botonObras:active {
+   transform: translateY(0);
+}
+
+/* =================
+   RESPONSIVE DESIGN
+   ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .contenedorObras {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .imagenObras,
+  .descripcionObras {
+    width: 100%;
+  }
+
+  .descripcionObras {
+    padding: 40px;
+  }
+
+  .descripcionObras h2 {
+    font-size: 32px;
+  }
+
+  .descripcionObras p {
+    font-size: 24px;
+    padding-right: 0;
+  }
+
+  .botonObras {
+    font-size: 24px;
+    padding: 20px 20%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .contenedorObras {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .descripcionObras {
+    padding: 25px;
+  }
+
+  .descripcionObras h2 {
+    font-size: 26px;
+  }
+
+  .descripcionObras p {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .botonObras {
+    font-size: 20px;
+    padding: 15px 30%;
+  }
+}

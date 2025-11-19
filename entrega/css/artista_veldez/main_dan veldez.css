@@ -1,0 +1,532 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+main {
+    width: 100%;
+    min-height: 100%;
+    background-color: #9F0A3A;
+}
+
+body {
+    background-color: #1a031f;
+}
+
+/* =================
+   ESTILOS DEL NAVBAR
+   ================= */
+nav {
+    /*background-color: #43766C;*/
+    padding: 20px 160px;
+    padding-right: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* --- LOGO --- */
+nav .logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+nav .logo img {
+    height: 60px;
+}
+
+nav .logo p {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: normal;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* --- LINKS --- */
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    color: #D9E3E1;
+}
+
+/* --- HAMBURGUESA --- */
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    /* Líneas apiladas verticalmente */
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburguesa .linea {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+    /* Navbar responsivo */
+    nav {
+        padding: 20px 60px;
+    }
+
+    nav .logo a {
+        justify-content: center;
+    }
+
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    .hamburguesa {
+        margin-right: 20px;
+    }
+}
+
+
+/* =================
+   ESTILOS DEL NAVBAR
+   ================= */
+nav {
+    background-color:#3ea633 
+}
+
+/* =================
+   HEADER
+   ================= */
+main>header {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+main>header>img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main {
+     width: 100%;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.tituloArtista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 40%;
+    height: 100%;
+    padding: 0 100px;
+
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tituloArtista h1 {
+    margin: 0 0 5px 0;
+    font-size: 3.5em;
+    color: white;
+    transform: translateY(-90px);
+}
+
+.tituloArtista h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    transform: translateY(-85px);
+}
+
+/* =================
+   GALERÍA
+   ================= */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5%;
+    row-gap: 50px;
+    /* Espacio entre filas */
+}
+
+.galeria>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 4px solid #702a84;
+}
+
+.imagenGrande {
+    grid-column: span 2;
+    /* Ocupa dos columnas */
+    width: 100%;
+    height: auto;
+}
+
+.imagenExtraGrande {
+    grid-column: span 3;
+    /* Ocupa tres columnas */
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.imagenesPequeñas {
+    aspect-ratio: 1 / 1.4;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* =================
+   FONDO DEL MAIN
+   ================= */
+
+main {
+    position: relative;
+    /* necesario para posicionar los pseudoelementos */
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    /* evita que se salgan las imágenes del contenedor */
+}
+
+
+
+/* Imagen izquierda */
+
+
+/* Imagen derecha */
+
+
+/* Asegura que la galería esté por encima */
+.galeria {
+    position: relative;
+    z-index: 1;
+}
+
+/* =================
+   BOTÓN OBRA DESTACADA
+   ================= */
+
+.botonObras {
+    position: relative;
+    z-index: 10;
+    /* hace que el botón quede encima */
+
+    display: flex;
+
+    margin: 40px auto;
+  
+
+    padding: 18px 60px;
+    font-size: 1.3em;
+    font-weight: 600;
+    
+    color: #fff;
+    background: linear-gradient(45deg, #3ea633, #3ea633);
+    border: #3ea633 solid 4px;
+    border-radius: 0;
+
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.botonObras:hover {
+    transform: translateY(-3px);
+    border-color: #702a84 ;
+}
+
+.botonObras:active {
+    transform: translateY(0);
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+    /* Estilos para pantallas pequeñas */
+
+    /* Header responsivo */
+    .tituloArtista {
+        font-size: 0.8em;
+    }
+
+    .tituloArtista h1 {
+        color: white;
+        font-size: 3.5em;
+        transform: translateY(-70px);
+    }
+
+    .tituloArtista h2 {
+        font-size: 2em;
+        transform: translateY(-65px);
+    }
+
+    /* La galería en pantallas pequeñas */
+    .galeria {
+        grid-template-columns: 1fr;
+        /* Solo una columna en móviles */
+        row-gap: 30px;
+    }
+
+    /* Las imágenes grandes van primero y ocupan todo el ancho */
+    .imagenGrande,
+    .imagenExtraGrande {
+        grid-column: 1 / -1;
+        /* Ocupan toda la fila */
+        order: -1;
+        /* Muevelas al inicio */
+    }
+
+    /* Ajuste opcional de tamaño o proporción */
+    .imagenGrande img,
+    .imagenExtraGrande img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*Fondo*/
+    main::before{
+        top: 600px;
+    }
+
+    .botonObras {
+        font-size: 1em;
+        padding: 14px 40px;
+        margin-top: 45px;
+    }
+}
+
+/* =================
+   FOOTER
+   ================= */
+footer {
+    background-color: #3D0761;
+    color: white;
+    text-align: left;
+    padding: 40px 160px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+}
+
+.footer_content {
+    padding-left: 15px;
+}
+
+.redes_sociales {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+}
+
+.redes_sociales li a img {
+    /* Iconos de redes sociales */
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.redes_sociales .facebook img {
+    /* Icono de Facebook */
+    width: 25px;
+}
+
+.redes_sociales li a img:hover {
+    /* Efecto hover en iconos */
+    transform: scale(1.2);
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+    /* Footer responsivo */
+    footer {
+        padding: 40px 60px;
+    }
+}
+
+section {
+    width: 100%;
+    margin: 0;
+    background: white;
+    border: 12px solid #9F0A3A;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    /* overflow: hidden; */  /* QUITAR */
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.fila1 .rect {
+    left: 0;
+    width: 400px; /* ancho mayor */
+}
+
+.fila2 .rect {
+    right: 0;
+    width: 400px; /* ancho mayor */
+}
+
+
+.fila {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+}
+
+
+.fila img {
+    width: 300px; /* más alargadas */
+    height: 400px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2; /* imágenes encima del rectángulo */
+    transition: transform 0.3s;
+    border: #3D0761 6px solid;
+}
+
+
+.fila img:hover {
+transform: scale(1.05);
+}
+
+
+/* RECTÁNGULO DETRÁS DE CADA FILA */
+.fila .rect1 {
+    left: 0;
+    top:-20px;
+    position: absolute;
+    height: 411px; /* puedes ajustar */
+    background: #9F0A3A;
+    z-index: 1; /* Debajo de las imágenes */
+    width: 1400px;
+}
+
+.fila .rect2 {
+    right: 0;
+    bottom: -20px;
+    position: absolute;
+    height: 411px; /* puedes ajustar */
+    background: #9F0A3A;
+    z-index: 1; /* Debajo de las imágenes */
+    width: 1400px;
+}
+
+
+/* =================
+   ANIMACIÓN SUAVE AL SCROLL
+   ================= */
+.fila img {
+    opacity: 0;              /* inicial transparente */
+    transform: translateY(50px); /* baja un poco */
+    transition: all 1s ease-out; /* transición suave */
+}
+
+.fila img.visible {
+    opacity: 1;              /* visible */
+    transform: translateY(0); /* vuelve a su posición */
+}
+
+
+/* Media query específico para el section con filas y rectángulos */
+@media (max-width: 1200px) {
+    section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        gap: 40px;
+    }
+
+    .fila img {
+        width: 220px; /* ajusta tamaño de las imágenes */
+        height: 150px;
+    }
+
+    .fila1 .rect,
+    .fila2 .rect {
+        width: 300px; /* ajusta ancho de los rectángulos */
+        height: 150px; /* ajusta altura de los rectángulos */
+        top: 20px;     /* ajusta posición vertical */
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        gap: 30px;
+    }
+
+    .fila {
+        flex-wrap: wrap;
+    }
+
+    .fila img {
+        width: 45%;
+        height: 140px;
+    }
+
+    .fila1 .rect,
+    .fila2 .rect {
+        width: 180px;  /* más pequeño para móvil */
+        height: 100px;
+        top: 15px;
+    }
+}

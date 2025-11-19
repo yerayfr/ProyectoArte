@@ -22,7 +22,7 @@ body {
     height: 100%;
     font-family: Arial, sans-serif;
     color: white;
-    background-color: lightgray;
+    background-color: white;
 }
 :root {
   --color-verde:#43766C;
@@ -35,6 +35,10 @@ body {
 * === Clases de la web ===
 * ================================
 */
+
+main {
+  background-color: white;
+}
 
 nav {
     background-color: #43766C;
@@ -127,6 +131,7 @@ nav .nav-links li a:hover {
   justify-content: right;
   padding: 20px;
   margin: 30px;
+  
 }
 
 .heroContent {
@@ -501,7 +506,7 @@ footer {
     padding: 40px 160px;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
-    margin-top: 20px;
+
 }
 
 .footer_content  {
