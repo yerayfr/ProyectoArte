@@ -97,7 +97,8 @@ nav .nav-links li a:hover {
 /* =================
    ESTILOS DEL HERO
    ================= */
-.hero { /* CAJA DE: DRIFTWOOD VISIONS y Quienes somos? */
+.hero {
+    /* CAJA DE: DRIFTWOOD VISIONS y Quienes somos? */
     margin: 15px 0;
     background-color: #634A45;
     font-family: 'Montserrat', sans-serif;
@@ -179,54 +180,66 @@ nav .nav-links li a:hover {
     margin: 15px 0;
 }
 
-.trabajos_container { /* Fondo entre imágenes y barras */
-    background-color: rgba(248, 250, 229, 0.58); /* #F8FAE5 con opacidad del 58% */
+.trabajos_container {
+    /* Fondo entre imágenes y barras */
+    background-color: rgba(248, 250, 229, 0.58);
+    /* #F8FAE5 con opacidad del 58% */
 }
 
 /* Barra verde encima de la imagen */
 .barra {
-  position: relative;
-  background-color: #43766C;
-  height: 75px;
-  z-index: 2; /* se mantiene por encima de la imagen */
-  margin-bottom: 15px;
+    position: relative;
+    background-color: #43766C;
+    height: 75px;
+    z-index: 2;
+    /* se mantiene por encima de la imagen */
+    margin-bottom: 15px;
 }
 
 /* Imagen debajo de la barra */
 .trabajos_container img {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
 
 /* El nombre del artista "colgando" hacia abajo */
 .titulo_artista h3 {
-  position: absolute;
-  bottom: -185px; /* lo hace colgar por debajo de la barra */
+    position: absolute;
+    bottom: -185px;
+    /* lo hace colgar por debajo de la barra */
 
-  background-color: #43766C;
-  
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 35px;
-  font-weight: bold;
+    background-color: #43766C;
 
-  padding: 90px 200px; /* espacio interno */
-  padding-top: 40px; /* quita el padding superior */
-  border-radius: 20px;
-  z-index: 3; /* encima de la imagen */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+
+    padding: 90px 200px;
+    /* espacio interno */
+    padding-top: 40px;
+    /* quita el padding superior */
+    border-radius: 20px;
+    z-index: 3;
+    /* encima de la imagen */
 }
 
-.trabajos_container .trabajo1 h3:nth-of-type(1) { /* se refiere al primer trabajo */
-    right: 0;           /* se pega al borde derecho */
+.trabajos_container .trabajo1 h3:nth-of-type(1) {
+    /* se refiere al primer trabajo */
+    right: 0;
+    /* se pega al borde derecho */
     border-radius: 20px 20px 0px 20px;
 }
 
-.trabajos_container .trabajo2 h3:nth-of-type(1) { /* se refiere al segundo trabajo */   
-    left: -15px;           /* se pega al borde izq */
+.trabajos_container .trabajo2 h3:nth-of-type(1) {
+    /* se refiere al segundo trabajo */
+    border-radius: 0px 0px 20px 0px;
+    padding-left: 180px;
 }
 
 .trabajos_container img {
-  margin-bottom: 15px; /* espacio entre imagen y barra */
+    margin-bottom: 15px;
+    /* espacio entre imagen y barra */
 }
 
 /* =================
@@ -243,11 +256,12 @@ footer {
     margin-top: 20px;
 }
 
-.footer_content  {
+.footer_content {
     padding-left: 15px;
 }
 
-.redes_sociales { /* Lista de redes sociales */
+.redes_sociales {
+    /* Lista de redes sociales */
     list-style: none;
     padding: 0;
     display: flex;
@@ -255,17 +269,20 @@ footer {
     gap: 30px;
 }
 
-.redes_sociales li a img { /* Estilo común para todos los iconos */
+.redes_sociales li a img {
+    /* Estilo común para todos los iconos */
     width: 40px;
     height: 40px;
     transition: filter 0.3s;
 }
 
-.redes_sociales .facebook img { /* Icono de Facebook */
+.redes_sociales .facebook img {
+    /* Icono de Facebook */
     width: 25px;
 }
 
-.redes_sociales li a img:hover { /* Efecto hover para todos los iconos */
+.redes_sociales li a img:hover {
+    /* Efecto hover para todos los iconos */
     transform: scale(1.2);
 }
 
@@ -274,6 +291,7 @@ footer {
    MEDIA QUERIES
    ================= */
 @media screen and (max-width: 1000px) {
+
     /* --- NAVBAR --- */
     nav {
         padding: 20px 60px;
@@ -338,5 +356,104 @@ footer {
 
     footer {
         padding: 40px 60px;
-     }
+    }
+}
+
+/* =================
+   ANIMACIONES
+   ================= */
+
+/* Oculto al inicio */
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    /* parte desde abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Cuando se hace visible */
+.slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imagen_entrada.slide-up {
+    opacity: 0;
+    transform: translateY(80px); /* empieza más abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.imagen_entrada.slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* IMAGEN DE ENTRADA */
+.imagen_entrada {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    transition: box-shadow 0.5s ease, filter 0.5s ease;
+}
+
+.imagen_entrada:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+    /* suavemente más clara */
+}
+
+/* ÚLTIMOS TRABAJOS */
+.trabajos_container img {
+    width: 100%;
+    display: block;
+    transition: box-shadow 0.5s ease, filter 0.5s ease;
+}
+
+.trabajos_container img:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    filter: brightness(1.05);
+    /* más sutil que el zoom */
+}
+
+
+/* Ocultos al inicio */
+.img1_clas,
+.img2_clas {
+    opacity: 0;
+    transform: translateX(0);
+    /* se sobrescribirá según animación */
+}
+
+/* Animaciones */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Cuando se activa */
+.img1_clas.visible {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.img2_clas.visible {
+    animation: slideInFromRight 1s ease-out forwards;
 }
