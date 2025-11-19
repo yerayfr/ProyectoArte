@@ -277,3 +277,17 @@ footer {
         padding: 40px 40px;
     }
 }
+
+/* ======================
+   ANIMACIÓN SUAVE AL SCROLL
+   ====================== */
+.galeria img {
+    opacity: 0;                    /* invisibles al inicio */
+    transform: translateY(50px);   /* bajadas 50px */
+    transition: all 1s ease-out;   /* transición suave */
+}
+
+.galeria img.visible {
+    opacity: 1;                    /* visibles al aparecer */
+    transform: translateY(0);      /* vuelven a su posición */
+}
