@@ -35,3 +35,7 @@ COLLAPSIBLE NAV-BAR
 .navbar-toggler-icon {
     filter: invert(1); /* Icono blanco */
 }
+
+.nav-item {
+    margin: 0;
+}
