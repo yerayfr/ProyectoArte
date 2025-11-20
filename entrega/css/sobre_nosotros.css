@@ -60,7 +60,7 @@ nav .nav-links li a:hover {
 /*-ESTILOS SOBRE NOSOTROS-*/
 
 
-.about-us-center {
+.container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@ nav .nav-links li a:hover {
     overflow: hidden;
 }
 
-.about-us-center::before {
+.container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -85,32 +85,14 @@ nav .nav-links li a:hover {
     height: 100%;
     
 }
-
-.about-us-center>div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 55vw;
-}
-
-.about-us-text,
-.our-mission-text,
-.our-story-text {
-    margin: 3vb;
+.section-img {
     width: 100%;
-    max-width: 100%;
     height: auto;
-    padding-left: 15%;
-    padding-right: 15%;
+    border-radius: 8px;
+    object-fit: cover;
 }
-
-div>span {
-    font-size: clamp(0.5rem, 1vw, 1.2rem);
-    line-height: 1.2;
-}
-
-div>h3 {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: bolder;
+.content-section {
+    padding: 3rem 0;
 }
 
 
