@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const elementos = document.querySelectorAll('.slide-up, .imagen_entrada.slide-up');
+    const elementos = document.querySelectorAll('.slide-up, .imagen_entrada.slide-up, .carruselSection');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
