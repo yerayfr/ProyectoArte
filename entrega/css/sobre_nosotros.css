@@ -28,8 +28,7 @@ nav .logo img {
 nav .logo p {
     color: white;
     font-size: 1.5em;
-    font-family: 'Nanum Brush Script', cursive;
-    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding-left: 10px;
 }
@@ -51,7 +50,6 @@ nav .nav-links {
 nav .nav-links li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
     transition: color 0.3s;
 }
 
