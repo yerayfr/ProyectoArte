@@ -1,3 +1,4 @@
+
 /* =================
    ESTILOS DEL NAV
    ================= */
@@ -208,4 +209,18 @@ footer>img {
 .slide-up.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.margen1 {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.textojustificado {
+    text-align: justify;
+    width: 30%;
+}
+
+.centrar {
+    justify-content: center;
 }
