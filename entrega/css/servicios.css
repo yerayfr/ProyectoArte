@@ -97,22 +97,6 @@ nav .nav-links li a:hover {
     color: #D9E3E1;
 }
 
-/* --- HAMBURGUESA --- */
-.hamburguesa {
-    display: flex;
-    flex-direction: column;
-    /* Líneas apiladas verticalmente */
-    cursor: pointer;
-    gap: 5px;
-}
-
-.hamburguesa .linea {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s;
-}
-
 /*
 * =======================
 * ==  HERO SECTION     ==

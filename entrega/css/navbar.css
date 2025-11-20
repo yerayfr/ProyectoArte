@@ -9,11 +9,11 @@ COLLAPSIBLE NAV-BAR
 }
 
 .navbar-brand .logo {
-    height: 40px; /* Ajusta según tu imagen */
+    height: 40px;
 }
 
 .brand-text {
-    font-family: "Handlee", cursive; /* Parecido al estilo manuscrito de la imagen */
+    font-family: "Handlee", cursive;
     font-size: 1.5rem;
     color: white;
 }
