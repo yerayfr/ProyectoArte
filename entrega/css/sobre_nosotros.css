@@ -8,6 +8,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 100;
 }
 
 /* --- LOGO --- */
@@ -68,15 +70,17 @@ nav .nav-links li a:hover {
     width: 100%;
     height: fit-content;
     z-index: 1;
+    overflow: hidden;
 }
 
 .about-us-center::before {
     content: "";
     position: absolute;
+    top: 0;
     bottom: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-image: url("../img/sobre_nostros/bg.svg");
     z-index: -1;
     width: 100%;
@@ -90,25 +94,20 @@ nav .nav-links li a:hover {
     width: 70vw;
 }
 
-.img1,
-.img2,
-.img3,
 .about-us-text,
 .our-mission-text,
 .our-story-text {
     margin: 3vb;
-    width: 75%;
-}
-
-.about-us-text,
-.our-mission-text,
-.our-story-text {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     padding-left: 15%;
     padding-right: 15%;
 }
 
 div>span {
-    font-size: clamp(0.5rem, 1vw, 1, 2rem);
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    line-height: 1.6;
 }
 
 div>h3 {
@@ -129,6 +128,8 @@ div>h3 {
 footer {
     color: #FFFFFF;
     background-color: #513F3C;
+    position: relative;
+    z-index: 100;
 }
 
 footer>h2 {
@@ -165,17 +166,26 @@ footer>img {
         margin-bottom: 50px;
     }
 
-    .about-us-center img {
-        width: 80%;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 15px;
-    }
+    .img1, .img2, .img3 {
+        width: 100%;
+        display: flex;
+        margin: 20px 0;
+        
+        .about-us-center img {
+            width: 80%;
+            max-width: 350px;
+            height: auto;
+            
+            object-fit: cover;
+            border-radius: 10px;
+        }
 
-    .about-us-text,
-    .our-mission-text,
-    .our-story-text {
-        padding: 10px;
+        .about-us-text,
+        .our-mission-text,
+        .our-story-text {
+            padding: 10px;
+        }
+    
     }
 }
 
@@ -186,11 +196,17 @@ footer>img {
 .img3 {
     overflow: hidden;
     border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 .about-us-center img {
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
