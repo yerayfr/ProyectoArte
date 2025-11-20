@@ -74,15 +74,13 @@ nav .nav-links li a:hover {
     content: "";
     position: absolute;
     bottom: 0;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     background-image: url("../img/sobre_nostros/bg.svg");
     z-index: -1;
     width: 100%;
     height: 100%;
-
-    top: -354px;
     
 }
 
