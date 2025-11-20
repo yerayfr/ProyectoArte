@@ -91,7 +91,7 @@ nav .nav-links li a:hover {
 .about-us-center>div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 70vw;
+    width: 55vw;
 }
 
 .about-us-text,
@@ -106,8 +106,8 @@ nav .nav-links li a:hover {
 }
 
 div>span {
-    font-size: clamp(0.8rem, 2vw, 1.2rem);
-    line-height: 1.6;
+    font-size: clamp(0.5rem, 1vw, 1.2rem);
+    line-height: 1.2;
 }
 
 div>h3 {
