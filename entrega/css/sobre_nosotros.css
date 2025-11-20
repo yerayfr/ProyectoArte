@@ -215,3 +215,17 @@ footer>img {
     transform: scale(1.1);
     cursor: pointer;
 }
+
+/* Oculto al inicio */
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    /* parte desde abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Cuando se hace visible */
+.slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
