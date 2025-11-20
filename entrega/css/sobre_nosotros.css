@@ -60,37 +60,60 @@ nav .nav-links li a:hover {
 /*-ESTILOS SOBRE NOSOTROS-*/
 
 
-.about-us-center{
+.about-us-center {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: fit-content;
-    background-image: url("../img/sobre_nostros/bg.svg");
-    background-repeat: space;
-    background-size: auto;
+    z-index: 1;
 }
 
-.about-us-center > div{
+.about-us-center::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url("../img/sobre_nostros/bg.svg");
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    top: -354px;
+    
+}
+
+.about-us-center>div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 70vw;
 }
 
-.img1, .img2, .img3, .about-us-text, .our-mission-text, .our-story-text{
+.img1,
+.img2,
+.img3,
+.about-us-text,
+.our-mission-text,
+.our-story-text {
     margin: 3vb;
     width: 75%;
 }
 
-.about-us-text, .our-mission-text, .our-story-text{
+.about-us-text,
+.our-mission-text,
+.our-story-text {
     padding-left: 15%;
     padding-right: 15%;
 }
 
-div > span {
-    font-size: clamp(0.5rem, 1vw, 1,2rem);
+div>span {
+    font-size: clamp(0.5rem, 1vw, 1, 2rem);
 }
-div > h3 {
+
+div>h3 {
     font-size: clamp(1.5rem, 2.5vw, 2rem);
     font-weight: bolder;
 }
@@ -132,35 +155,37 @@ footer>img {
 
 @media (max-width: 768px) {
 
-    .about-us-center > div {
+    .about-us-center>div {
 
         grid-template-columns: 1fr;
-        
-        height: auto; 
-        
-        
+
+        height: auto;
+
+
         width: 90%;
-        
-        margin-bottom: 50px; 
+
+        margin-bottom: 50px;
     }
 
     .about-us-center img {
-        width: 80%; 
-        object-fit: cover; 
-        border-radius: 10px; 
+        width: 80%;
+        object-fit: cover;
+        border-radius: 10px;
         margin-bottom: 15px;
     }
 
-    .about-us-text, 
-    .our-mission-text, 
+    .about-us-text,
+    .our-mission-text,
     .our-story-text {
-        padding: 10px; 
+        padding: 10px;
     }
 }
 
 /*Zoom en imagenes con hover*/
 
-.img1, .img2, .img3 {
+.img1,
+.img2,
+.img3 {
     overflow: hidden;
     border-radius: 10px;
 }
