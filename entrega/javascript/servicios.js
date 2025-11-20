@@ -1,29 +1,50 @@
 const contenedor = document.querySelector('.carrusel-contenedor');
-const wrapper = document.querySelector('.carrusel-wrapper');
 const btnIzquierda = document.querySelector('.izquierda');
 const btnDerecha = document.querySelector('.derecha');
 
-const items = document.querySelectorAll('.artista');
-const gap = 20; // el mismo gap que en CSS
-const anchoItem = items[0].offsetWidth + gap;
-const totalItems = items.length;
+const itemsOriginales = [...document.querySelectorAll('.artista')];
+const gap = 20;
+const anchoItem = itemsOriginales[0].offsetWidth + gap;
 
-// Número máximo de desplazamientos (total - visibles)
-const maxDesplazamiento = -(anchoItem * (totalItems - 3)); // 3 visibles
-let desplazamiento = 0;
-
-btnDerecha.addEventListener('click', () => {
-  desplazamiento -= anchoItem;
-  if (desplazamiento < maxDesplazamiento) {
-    desplazamiento = maxDesplazamiento; // no pasar del final
-  }
-  contenedor.style.transform = `translateX(${desplazamiento}px)`;
+// Duplicamos para efecto infinito
+itemsOriginales.forEach(item => {
+  const clon = item.cloneNode(true);
+  contenedor.appendChild(clon);
 });
 
-btnIzquierda.addEventListener('click', () => {
-  desplazamiento += anchoItem;
-  if (desplazamiento > 0) {
-    desplazamiento = 0; // no pasar del inicio
-  }
-  contenedor.style.transform = `translateX(${desplazamiento}px)`;
-});
+let index = 0;
+
+// Smooth transform usando translate3d
+function moverCarrusel(direccion) {
+  index += direccion;
+
+  contenedor.style.transition = "transform 0.45s cubic-bezier(.25,.46,.45,.94)";
+  contenedor.style.transform = `translate3d(${-index * anchoItem}px, 0, 0)`;
+
+  // Loop suave
+  setTimeout(() => {
+    if (index >= itemsOriginales.length) {
+      // Paso 1: quitar transición
+      contenedor.style.transition = "none";
+
+      // Paso 2: usar RAF para evitar jump visible
+      requestAnimationFrame(() => {
+        index = 0;
+        contenedor.style.transform = `translate3d(0px, 0, 0)`;
+      });
+    }
+
+    if (index < 0) {
+      contenedor.style.transition = "none";
+
+      requestAnimationFrame(() => {
+        index = itemsOriginales.length - 1;
+        contenedor.style.transform = `translate3d(${-index * anchoItem}px, 0, 0)`;
+      });
+    }
+  }, 460); // 10 ms más que la transition para evitar cortes
+}
+
+// Botones
+btnDerecha.addEventListener('click', () => moverCarrusel(1));
+btnIzquierda.addEventListener('click', () => moverCarrusel(-1));
