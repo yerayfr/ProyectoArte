@@ -60,6 +60,16 @@ nav .nav-links li a:hover {
 
 /*-ESTILOS SOBRE NOSOTROS-*/
 
+.bg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    z-index: 1;
+    overflow: hidden;
+}
 
 .container {
     position: relative;
@@ -72,10 +82,11 @@ nav .nav-links li a:hover {
     overflow: hidden;
 }
 
-.container::before {
+.bg::before {
     content: "";
     position: absolute;
     top: 0;
+    left: 0;
     bottom: 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -84,13 +95,13 @@ nav .nav-links li a:hover {
     z-index: -1;
     width: 100%;
     height: 100%;
-    
 }
 .section-img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
+    margin-right: 15%; /* solo espacio a la derecha de la imagen */
 }
 .content-section {
     padding: 3rem 0;
@@ -211,11 +222,6 @@ footer>img {
     transform: translateY(0);
 }
 
-.margen1 {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
 .textojustificado {
     text-align: justify;
     width: 30%;
@@ -223,4 +229,5 @@ footer>img {
 
 .centrar {
     justify-content: center;
+    gap:7.5%;
 }
